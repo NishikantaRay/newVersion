@@ -182,6 +182,7 @@ class MinimalPortfolio {
       hero: {
         name: "Nishikanta Ray",
         title: "Full-Stack Developer & Designer",
+        profile_image: "https://avatars.githubusercontent.com/u/62615392?v=4",
         intro: [
           "I'm a passionate Software Engineer with expertise in full-stack development and a keen interest in creating innovative solutions. Currently working at <a href='https://letsflo.co' target='_blank' rel='noopener noreferrer'>@letsflo</a> and actively contributing to the open-source community.",
         
@@ -323,6 +324,13 @@ class MinimalPortfolio {
     if (!this.homeConfig?.hero) return;
 
     const hero = this.homeConfig.hero;
+    
+    // Update profile image
+    const profileImg = document.querySelector('.profile-img');
+    if (profileImg && hero.profile_image) {
+      profileImg.src = hero.profile_image;
+      profileImg.alt = hero.name || 'Profile';
+    }
     
     // Update hero title
     const titleElement = document.querySelector('.hero-title');
