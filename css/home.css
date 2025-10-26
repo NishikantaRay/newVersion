@@ -453,7 +453,7 @@ body {
     }
 
     .mobile-menu-toggle {
-        display: block;
+        display: block !important;
     }
 
     .nav-controls {

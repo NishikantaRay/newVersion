@@ -545,6 +545,10 @@ body {
         display: flex;
     }
 
+    .mobile-menu-toggle {
+        display: block !important;
+    }
+
     .nav-mobile-spacer {
         display: block;
         width: 24px;

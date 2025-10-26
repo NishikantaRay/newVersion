@@ -127,7 +127,7 @@ class PortfolioPage {
         {
           id: "email",
           name: "Email",
-          url: "mailto:nishikantaray@example.com",
+          url: "mailto:nishikantaray@gmail.com",
           icon: "fas fa-envelope",
           target: "_self",
           enabled: true
@@ -183,7 +183,7 @@ class PortfolioPage {
           <div class="contact-info">
             <h2>Get In Touch</h2>
             <p>Feel free to reach out through any of these channels:</p>
-            <p><a href="mailto:nishikantaray@example.com">nishikantaray@example.com</a></p>
+            <p><a href="mailto:nishikantaray@gmail.com">nishikantaray@gmail.com</a></p>
           </div>
 
           <div class="status-section">
