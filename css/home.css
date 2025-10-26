@@ -186,6 +186,12 @@ body {
     color: var(--text-muted);
     margin-bottom: var(--space-8);
     line-height: 1.7;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-intro.content-loaded {
+    opacity: 1;
 }
 
 .hero-intro a {
@@ -241,6 +247,12 @@ body {
     justify-content: center;
     margin-top: var(--space-8);
     flex-wrap: wrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-actions.content-loaded {
+    opacity: 1;
 }
 
 .btn {
@@ -506,9 +518,17 @@ body {
 
 /* Freelance Projects Section */
 .freelance-projects,
-.latest-products {
+.latest-products,
+#dashboard {
     padding: var(--space-12) 0;
     border-top: 1px solid var(--border);
+    display: none; /* Hidden by default, shown by JS if enabled */
+}
+
+.freelance-projects.section-visible,
+.latest-products.section-visible,
+#dashboard.section-visible {
+    display: block;
 }
 
 .section-header {
