@@ -7,9 +7,46 @@ class ProjectsConfig {
     constructor() {
         this.config = null;
         this.fallbackConfig = this.getFallbackConfig();
+        this.isReady = false;
+        this.initPromise = this.initializeTomlSupport();
+    }
+
+    async initializeTomlSupport() {
+        try {
+            // Check what's available in the global scope
+            console.log('Checking available TOML parsers:');
+            console.log('window.toml:', typeof window.toml, window.toml);
+            console.log('window.TOML:', typeof window.TOML, window.TOML);
+            console.log('window.tomlLoader:', typeof window.tomlLoader, window.tomlLoader);
+            
+            // Wait for TOML loader to be ready
+            if (window.tomlLoader) {
+                await window.tomlLoader.getParser();
+                console.log('TOML loader is ready for projects config');
+            } else {
+                console.log('No tomlLoader available, checking for direct access...');
+                
+                // Wait a bit for scripts to load
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Check again after waiting
+                console.log('After waiting - window.toml:', typeof window.toml);
+                console.log('After waiting - window.TOML:', typeof window.TOML);
+            }
+            
+            this.isReady = true;
+        } catch (error) {
+            console.warn('TOML loader not available, will use fallback:', error);
+            this.isReady = true; // Still mark as ready to use fallback
+        }
     }
 
     async loadConfig() {
+        // Ensure TOML support is initialized first
+        if (!this.isReady) {
+            await this.initPromise;
+        }
+
         try {
             const response = await fetch('./config/projects.toml');
             if (!response.ok) {
@@ -17,9 +54,62 @@ class ProjectsConfig {
             }
 
             const tomlContent = await response.text();
-            this.config = TOML.parse(tomlContent);
+            console.log('TOML content loaded, attempting to parse...');
             
-            console.log('Projects configuration loaded successfully');
+            // Try multiple parsing approaches
+            let parsedConfig;
+            let parseMethod = 'unknown';
+            
+            // Try toml loader first
+            if (window.tomlLoader) {
+                try {
+                    parsedConfig = await window.tomlLoader.parse(tomlContent);
+                    parseMethod = 'tomlLoader';
+                } catch (e) {
+                    console.warn('tomlLoader failed:', e.message);
+                }
+            }
+            
+            // Try direct access to loaded libraries
+            if (!parsedConfig) {
+                if (window.toml && window.toml.parse) {
+                    try {
+                        parsedConfig = window.toml.parse(tomlContent);
+                        parseMethod = 'window.toml';
+                    } catch (e) {
+                        console.warn('window.toml failed:', e.message);
+                    }
+                }
+            }
+            
+            if (!parsedConfig) {
+                if (window.TOML && window.TOML.parse) {
+                    try {
+                        parsedConfig = window.TOML.parse(tomlContent);
+                        parseMethod = 'window.TOML';
+                    } catch (e) {
+                        console.warn('window.TOML failed:', e.message);
+                    }
+                }
+            }
+            
+            // If all else fails, use the simple parser from tomlLoader
+            if (!parsedConfig && window.tomlLoader) {
+                try {
+                    const simpleParser = window.tomlLoader.createSimpleTomlParser();
+                    parsedConfig = simpleParser.parse(tomlContent);
+                    parseMethod = 'simpleParser';
+                } catch (e) {
+                    console.warn('simpleParser failed:', e.message);
+                }
+            }
+            
+            if (!parsedConfig) {
+                throw new Error('All TOML parsing methods failed');
+            }
+            
+            this.config = parsedConfig;
+            console.log(`Projects configuration loaded successfully using ${parseMethod}`);
             return this.config;
         } catch (error) {
             console.warn('Failed to load projects configuration, using fallback:', error);
