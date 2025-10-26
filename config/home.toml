@@ -1,6 +1,17 @@
 # Home Page Configuration
 # Configure all content and settings for the home page
 
+# SEO Configuration
+[seo]
+title = "Nishikanta Ray - Software Engineer & Full Stack Developer"
+description = "A passionate Full Stack Developer, explorer, and freelancer with 3+ years of experience in designing, developing, and delivering innovative web solutions."
+keywords = "Nishikanta Ray, Full Stack Developer, Software Engineer, Web Developer, JavaScript, TypeScript, React, Node.js, Open Source"
+author = "Nishikanta Ray"
+og_image = "https://avatars.githubusercontent.com/u/62615392?v=4"
+og_url = "https://nishikanta.in/"
+twitter_card = "summary_large_image"
+twitter_creator = "@NishikantaRay"
+
 [hero]
 name = "Nishikanta Ray"
 title = "Software Engineer & Full Stack Developer"
