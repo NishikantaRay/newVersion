@@ -31,7 +31,7 @@ url = "https://teceads.com"
 [[experience]]
 position = "Software Engineer, Lets Flo (India)"
 company = "Lets Flo (India)"
-company_url = ""
+company_url = "https://letsflo.co"
 location = "Bengaluru, Karnataka"
 start_date = "Jul 2023"
 end_date = "present"
@@ -45,7 +45,7 @@ achievements = [
 [[experience]]
 position = "Software Developer Trainee, Teceads Solutions"
 company = "Teceads Solutions"
-company_url = ""
+company_url = "https://teceads.com"
 location = "Bhubaneswar, Odisha"
 start_date = "Jul 2022"
 end_date = "Jan 2023"
@@ -94,7 +94,7 @@ degree = "B.Tech in Electronics and Communication"
 institution = "Silicon University"
 institution_url = ""
 location = "Bhubaneswar, Odisha"
-graduation_year = "2023"
+graduation_year = "2019 – 2023"
 gpa = "8.65/10"
 
 [[education]]
@@ -102,7 +102,7 @@ degree = "XII (CHSE)"
 institution = "Vidyarthee Residential College"
 institution_url = ""
 location = "Dhenkanal, Odisha"
-graduation_year = "2019"
+graduation_year = "2017 – 2019"
 notes = "Passed with 79.67%"
 
 [[education]]
@@ -110,7 +110,7 @@ degree = "X (BSE, Odisha)"
 institution = "Brajanath Badajena High School"
 institution_url = ""
 location = "Dhenkanal, Odisha"
-graduation_year = "2017"
+graduation_year = "2007 – 2017"
 notes = "Passed with 77.5%"
 
 # Skills Section
