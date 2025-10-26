@@ -15,6 +15,7 @@
 [![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![TOML Config](https://img.shields.io/badge/Config-TOML-blue.svg)](https://toml.io/)
 [![Zero Build](https://img.shields.io/badge/Build-Zero-green.svg)](https://github.com/NishikantaRay/renderer)
+[![v2.0 Ready](https://img.shields.io/badge/Version-2.0-brightgreen.svg)](https://github.com/NishikantaRay/renderer)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://renderer.nishikanta.in/)
 [![Documentation](https://img.shields.io/badge/Docs-Available-blue.svg)](https://renderer.nishikanta.in/docs)
 
@@ -29,6 +30,14 @@
 ---
 
 ## ✨ Features
+
+### **🎯 Version 2.0 Highlights**
+- 🔧 **TOML-First Architecture** - Robust TOML parsing with smart fallbacks
+- 🏢 **@Mention System** - Professional company mentions with enhanced styling
+- 🔗 **Enhanced URL Support** - Repository, demo, and documentation links
+- 🎓 **Education System** - Dedicated education section with institution links
+- ⚡ **Performance Optimized** - Console cleanup and production-ready features
+- 🛠️ **Debugging Tools** - Advanced debugging and development utilities
 
 ### **Core Features**
 - 🔧 **Fully Configurable** - Configure every aspect through TOML files
@@ -279,7 +288,7 @@ keyboard_navigation = true  # Keyboard support
 
 ### **📝 Blog Configuration (`config/blog.toml`)**
 
-Configure your blog system:
+Configure your blog system with v2.0 enhancements:
 
 ```toml
 # Blog metadata
@@ -287,6 +296,8 @@ Configure your blog system:
 title = "Personal Blog"
 description = "Thoughts on web development and technology"
 author = "Nishikanta Ray"
+author_profile = "https://github.com/NishikantaRay"
+base_url = ""
 
 # Pagination
 [pagination]
@@ -299,22 +310,42 @@ enable_comments = true
 enable_social_sharing = true
 enable_search = true
 enable_categories = true
+enable_tags = true
+enable_related_posts = true
+default_image = "https://dummyimage.com/600x400/0066cc/ffffff&text=Blog+Post"
 
-# Blog posts
+# Blog posts with enhanced features
 [[posts]]
 id = "typescript-modern-web"
 title = "Building Modern Web Applications with TypeScript"
 description = "TypeScript best practices and implementation strategies"
 date = "2024-10-12"
-tags = ["TypeScript", "Web Development"]
+tags = ["TypeScript", "Web Development", "JavaScript"]
+category = "Development"
+content_file = "typescript-modern-web.md"
+author = "Nishikanta Ray"
+read_time = "8 min read"
 featured = true
+status = "published"
+image = "https://dummyimage.com/600x400/0066cc/ffffff&text=TypeScript+Web"
+repo_url = "https://github.com/NishikantaRay/typescript-examples"
+demo_url = "https://typescript-demo.yoursite.dev"
+license = "MIT"
+contributors = ["Nishikanta Ray", "Community Contributors"]
+features = [
+    "Type safety for large codebases",
+    "Seamless integration with modern frameworks", 
+    "Improved developer productivity",
+    "Better tooling and editor support"
+]
+related_posts = ["minimal-design", "open-source-journey"]
 ```
 
 **📖 Full Guide:** [docs/BLOG_CONFIG.md](docs/BLOG_CONFIG.md)
 
 ### **📄 Resume Configuration (`config/resume.toml`)**
 
-Create an interactive resume:
+Create an interactive resume with v2.0 features:
 
 ```toml
 # Personal information
@@ -324,27 +355,45 @@ title = "Full-Stack Developer"
 email = "your@email.com"
 phone = "+1234567890"
 location = "Your City, Country"
+profile_image = "path/to/image.jpg"
+summary = "Passionate developer with expertise in modern web technologies"
 
-# Experience
+# Experience with @company mentions
 [[experience]]
 title = "Senior Full-Stack Developer"
-company = "Tech Company"
+company = "@TechCompany"  # Use @mention for enhanced styling
 location = "City, Country"
 start_date = "2022-01"
 end_date = "Present"
-description = "Led development of scalable web applications..."
+description = "Led development of scalable web applications using React and Node.js"
+technologies = ["React", "Node.js", "TypeScript", "AWS"]
 
-# Skills
+# Education with institution links
+[[education]]
+degree = "Bachelor of Computer Science"
+institution = "University Name"
+institution_url = "https://university.edu"  # Enhanced with clickable links
+location = "City, Country"
+start_date = "2018-09"
+end_date = "2022-05"
+gpa = "3.8/4.0"
+relevant_coursework = ["Data Structures", "Algorithms", "Web Development"]
+
+# Skills with proficiency levels
 [[skills]]
 category = "Frontend"
-technologies = ["React", "TypeScript", "Vue.js"]
+technologies = ["React", "TypeScript", "Vue.js", "CSS3", "HTML5"]
 proficiency = "Expert"
+years_experience = 5
 
 # Settings
 [settings]
 show_gpa = true
 show_location = true
 enable_share_button = true
+show_technologies = true
+enable_company_links = true     # v2.0: Enhanced company linking
+enable_institution_links = true # v2.0: Clickable institution links
 ```
 
 **📖 Full Guide:** [docs/RESUME_CONFIG.md](docs/RESUME_CONFIG.md)
@@ -379,6 +428,30 @@ enabled = true
 
 ## 🎨 Customization Examples
 
+### **v2.0 Professional Setup (Recommended)**
+```toml
+# Enhanced blog with all v2.0 features
+[blog.settings]
+enable_comments = true
+enable_social_sharing = true
+enable_search = true
+enable_categories = true
+enable_tags = true
+enable_related_posts = true
+
+# Resume with @mentions and institution links
+[resume.settings]
+enable_company_links = true
+enable_institution_links = true
+show_technologies = true
+
+# Performance optimizations
+[performance]
+lazy_load_images = true
+preload_critical_content = true
+console_cleanup = true  # v2.0: Production console cleanup
+```
+
 ### **Minimal Setup (Performance Focused)**
 ```toml
 # Disable heavy features
@@ -391,6 +464,7 @@ animations = false
 [performance]
 lazy_load_images = true
 preload_critical_content = true
+console_cleanup = true
 
 [interactive]
 project_filtering = false
@@ -452,6 +526,16 @@ npx serve .
 debug_mode = true           # Show debug information
 performance_metrics = true # Performance timing
 error_logging = true       # Log errors
+console_cleanup = false    # v2.0: Disable for debugging
+```
+
+### **v2.0 Production Optimization**
+```toml
+[production]
+console_cleanup = true      # Clean console output
+error_handling = "silent"   # Silent error handling
+cache_busting = true       # Cache busting for configs
+performance_monitoring = true
 ```
 
 ### **Adding New Features**
@@ -504,20 +588,35 @@ config/
 
 ## 🔧 Troubleshooting
 
+### **TOML Configuration Issues (v2.0 Improvements)**
+1. **TOML Not Loading**: Check browser console for parsing errors
+2. **Custom TOML Parser**: v2.0 includes built-in TOML parser fallback
+3. **Cache Issues**: Files now include cache-busting parameters
+4. **Multi-line Arrays**: v2.0 supports complex multi-line TOML structures
+
 ### **Configuration Not Loading**
 1. Check browser console for TOML parsing errors
 2. Verify TOML syntax using an online validator
 3. Ensure configuration files exist in `config/` directory
+4. Try hard refresh (Ctrl+Shift+R) to clear cache
 
 ### **Features Not Hiding**
 1. Enable debug mode: `debug_mode = true`
 2. Check browser console for configuration status
 3. Clear browser cache and reload
+4. Verify TOML file structure matches documentation
 
 ### **Content Not Displaying**
 1. Verify markdown files exist in `content/` directory
 2. Check file paths in configuration
 3. Enable fallback content: `enable_fallback_content = true`
+4. Check network tab for failed file requests
+
+### **Blog System Issues**
+1. **TOML Changes Not Reflected**: Clear browser cache
+2. **Posts Not Loading**: Check content file paths in blog.toml
+3. **Images Not Displaying**: Verify image URLs in post configuration
+4. **Features Not Working**: Check settings section in blog.toml
 
 ## 🤝 Contributing
 
@@ -546,7 +645,14 @@ MIT License - Feel free to use and modify for your own portfolio!
 
 ## 🎯 Why This Portfolio?
 
-### **Advantages**
+### **v2.0 Advantages**
+- ✅ **Enhanced TOML Support** - Robust parsing with smart fallbacks
+- ✅ **Professional Styling** - @Company mentions and institutional links
+- ✅ **Production Ready** - Console cleanup and performance optimizations
+- ✅ **Better UX** - Enhanced URL support and improved navigation
+- ✅ **Developer Friendly** - Advanced debugging and development tools
+
+### **Core Advantages**
 - ✅ **No Build Process** - Works immediately
 - ✅ **No Framework Dependencies** - Pure vanilla code
 - ✅ **Complete Customization** - Configure without coding
@@ -562,6 +668,7 @@ MIT License - Feel free to use and modify for your own portfolio!
 - 📚 **Students** building their first portfolio
 - 💼 **Professionals** who want easy content management
 - 🚀 **Anyone** who values performance and simplicity
+- 🏢 **Companies** looking for professional team pages
 
 ---
 
@@ -570,4 +677,26 @@ MIT License - Feel free to use and modify for your own portfolio!
 For detailed configuration guides, see the `docs/` directory.
 
 Need help? Open an issue or check the troubleshooting section above.
-# newVersion
+
+## 📊 Changelog
+
+### **Version 2.0 (Latest)**
+- 🔧 **TOML-First Architecture**: Robust TOML parsing with custom fallback parser
+- 🏢 **@Mention System**: Professional company mentions with enhanced styling  
+- 🔗 **Enhanced URL Support**: Repository, demo, and documentation links
+- 🎓 **Education System**: Dedicated education section with institution links
+- ⚡ **Performance Optimized**: Console cleanup and production-ready features
+- 🛠️ **Advanced Debugging**: Comprehensive debugging and development tools
+- 🎨 **Professional Styling**: Enhanced CSS for company mentions and links
+- 🔄 **Smart Caching**: Cache-busting for configuration files
+- 📝 **Blog Enhancements**: Improved blog system with better TOML support
+
+### **Previous Versions**
+- v1.x: Initial release with basic TOML configuration
+- v0.x: Beta versions with experimental features
+
+---
+
+**✨ Built with ❤️ by [Nishikanta Ray](https://github.com/NishikantaRay) • Made for developers who value simplicity and power**
+
+*Start building your story today at [renderer.nishikanta.in](https://renderer.nishikanta.in/)* 🌟
