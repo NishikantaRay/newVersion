@@ -13,7 +13,7 @@ window.RESUME_CONFIG_JS = {
         website: "https://nishikanta.in",
         github: "https://github.com/NishikantaRay",
         linkedin: "https://linkedin.com/in/nishikanta-ray-7786a0196",
-        location: "Bhubaneswar, Odisha"
+        location: "Bengaluru, KA"
     },
 
     summary: {

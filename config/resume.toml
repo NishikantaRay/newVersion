@@ -9,10 +9,23 @@ email = "nishikantaray1@gmail.com"
 website = "https://nishikanta.in"
 github = "https://github.com/NishikantaRay"
 linkedin = "https://linkedin.com/in/nishikanta-ray-7786a0196"
-location = "Bhubaneswar, Odisha"
+location = "Bengaluru, KA"
 
 [summary]
 text = "A passionate Full Stack Developer, explorer, and freelancer with 3+ years of experience in designing, developing, and delivering innovative web solutions. Currently working at @letsflo and actively contributing to the open-source community."
+
+# Company Mappings for @mentions
+[companies]
+
+[companies.letsflo]
+mention = "@letsflo"
+name = "Lets Flo"
+url = "https://letsflo.co"
+
+[companies.teceads]
+mention = "@teceads"
+name = "Teceads Solutions"
+url = "https://teceads.com"
 
 # Work Experience Section
 [[experience]]

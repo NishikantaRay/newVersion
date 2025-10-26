@@ -29,12 +29,14 @@
 }
 
 [data-theme="dark"] .company-link,
-[data-theme="dark"] .institution-link {
+[data-theme="dark"] .institution-link,
+[data-theme="dark"] .company-mention {
     color: var(--primary);
 }
 
 [data-theme="dark"] .company-link:hover,
-[data-theme="dark"] .institution-link:hover {
+[data-theme="dark"] .institution-link:hover,
+[data-theme="dark"] .company-mention:hover {
     color: var(--text);
 }
 
@@ -224,6 +226,35 @@ body {
 
 .company-link:hover::after,
 .institution-link:hover::after {
+    opacity: 0.7;
+}
+
+.company-mention {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: rgba(0, 102, 204, 0.05);
+}
+
+.company-mention:hover {
+    color: var(--text);
+    background: rgba(0, 102, 204, 0.1);
+    text-decoration: underline;
+}
+
+.company-mention::after {
+    content: "🔗";
+    font-size: 10px;
+    margin-left: 2px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.company-mention:hover::after {
     opacity: 0.7;
 }
 
