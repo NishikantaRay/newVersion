@@ -3,8 +3,8 @@
 # See BLOG_CONFIG.md for detailed documentation
 
 [blog]
-title = "Personal Blog"
-description = "Thoughts on web development, technology, design, and everything in between."
+title = "Personal Blogs"
+description = "Thoughts on web developmentsssss, technology, design, and everything in between."
 author = "Nishikanta Ray"
 author_profile = "https://github.com/NishikantaRay"
 base_url = ""
