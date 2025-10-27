@@ -24,7 +24,7 @@ class PortfolioPage {
     try {
       if (window.projectsConfig) {
         this.config = await window.projectsConfig.loadConfig();
-        console.log('Projects config loaded:', this.config?.analytics?.enabled);
+        // Projects config loaded
         window.projectsConfig.applyStyles();
         
         // Update page metadata based on configuration
@@ -39,13 +39,13 @@ class PortfolioPage {
             const analyticsSection = document.querySelector('.analytics-section');
             if (analyticsSection) {
               analyticsSection.style.display = 'none';
-              console.log('Force hiding analytics section after config load');
+              // Force hiding analytics section after config load
             }
           }, 100);
         }
       }
     } catch (error) {
-      console.warn('Failed to load projects configuration:', error);
+      // Failed to load projects configuration
     }
   }
 
@@ -158,7 +158,7 @@ class PortfolioPage {
 
       this.renderContent(html);
     } catch (error) {
-      console.error("Failed to load content:", error);
+      // Failed to load content
       
       // Only show fallback if enabled in config
       if (window.projectsConfig?.isEnabled('content', 'enable_fallback_content')) {
@@ -521,7 +521,7 @@ class PortfolioPage {
         if (e.target.closest('.project-links')) return; // Don't filter when clicking links
         
         const tech = tag.getAttribute('data-tech');
-        console.log('Project uses technologies:', tech);
+        // Project uses technologies
         // Implement filtering logic here
         this.filterProjectsByTech(tech);
       });
@@ -601,8 +601,8 @@ class PortfolioPage {
   }
 
   enableDebugMode() {
-    console.log('🔧 Debug mode enabled for Projects page');
-    console.log('Configuration:', window.projectsConfig?.getConfig());
+    // Debug mode enabled for Projects page
+    // Configuration available via window.projectsConfig?.getConfig()
     
     // Add debug info to page
     const debugInfo = document.createElement('div');
@@ -668,7 +668,7 @@ class PortfolioPage {
       const analyticsSection = document.querySelector('.analytics-section');
       if (analyticsSection) {
         analyticsSection.style.display = 'none';
-        console.log('Analytics section hidden via setupAnalytics');
+        // Analytics section hidden via setupAnalytics
       }
       return;
     }

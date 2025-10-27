@@ -16,7 +16,6 @@ class SocialConfig {
             
             return true;
         } catch (error) {
-            console.error('Failed to initialize social configuration:', error);
             // Fallback to default configuration
             this.setDefaultConfig();
             return false;
@@ -36,13 +35,13 @@ class SocialConfig {
             // Use the shared TOML loader
             try {
                 this.config = await window.tomlLoader.parse(tomlContent);
-                console.log('Social configuration loaded successfully from TOML');
+                // Configuration loaded successfully
             } catch (parseError) {
-                console.warn('TOML parsing failed, using default config:', parseError.message);
+                // TOML parsing failed, using default config
                 this.setDefaultConfig();
             }
         } catch (error) {
-            console.error('Failed to load social.toml:', error);
+            // Failed to load social.toml
             throw error;
         }
     }
@@ -144,23 +143,15 @@ class SocialConfig {
 
     // Get enabled social links
     getEnabledLinks() {
-        console.log('getEnabledLinks called');
-        console.log('this.config:', this.config);
-        
         if (!this.config || !this.config.links || !Array.isArray(this.config.links)) {
-            console.warn('Social config links not available or not an array, using defaults');
-            console.log('this.config?.links:', this.config?.links);
-            console.log('Array.isArray(this.config?.links):', Array.isArray(this.config?.links));
+            // Social config links not available or not an array, using defaults
             return [];
         }
         
-        console.log('Available links:', this.config.links.length);
         const enabledLinks = this.config.links.filter(link => link.enabled);
-        console.log('Enabled links:', enabledLinks.length);
         
         const maxVisible = this.config.settings?.max_visible || 6;
         const result = enabledLinks.slice(0, maxVisible);
-        console.log('Final links to show:', result.length, result);
         
         return result;
     }
@@ -175,13 +166,8 @@ class SocialConfig {
         const enabledLinks = this.getEnabledLinks();
         const settings = this.getSettings();
         
-        console.log('generateSocialLinksHTML called');
-        console.log('enabledLinks:', enabledLinks);
-        console.log('settings:', settings);
-        
         if (enabledLinks.length === 0) {
-            console.warn('No enabled links found, using fallback');
-            // Force fallback HTML with default icons
+            // No enabled links found, using fallback
             return `
                 <a href="https://github.com/NishikantaRay" target="_blank" class="social-link" title="GitHub">
                     <span class="social-icon"><i class="fab fa-github"></i></span>
@@ -211,7 +197,6 @@ class SocialConfig {
             `;
         }).join('');
         
-        console.log('Generated HTML result:', html);
         return html;
     }
 
@@ -229,25 +214,21 @@ class SocialConfig {
 
     // Update social links in the DOM
     async updateSocialLinks(selector = '.social-links') {
-        console.log('updateSocialLinks called with selector:', selector);
         const containers = document.querySelectorAll(selector);
-        console.log('Found containers:', containers.length);
         
         if (containers.length === 0) {
-            console.warn(`No elements found with selector: ${selector}`);
+            // No elements found with selector
             return;
         }
 
         // Ensure configuration is loaded
         if (!this.config) {
-            console.log('Config not loaded, initializing...');
+            // Config not loaded, initializing
             await this.init();
         }
 
         const html = this.generateSocialLinksHTML();
         const css = this.generateSocialCSS();
-
-        console.log('Generated HTML length:', html.length);
 
         // Update CSS first
         let styleElement = document.getElementById('social-config-styles');
@@ -260,7 +241,7 @@ class SocialConfig {
 
         // Update HTML with smooth transition
         containers.forEach((container, index) => {
-            console.log(`Updating container ${index}:`, container);
+            // Updating container
             
             // Hide container during update to prevent flash
             const originalOpacity = container.style.opacity;
@@ -281,7 +262,7 @@ class SocialConfig {
             }, 300);
         });
         
-        console.log('Social links update completed');
+        // Social links update completed
     }
 
     // Reload configuration
