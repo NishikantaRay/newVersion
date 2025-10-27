@@ -123,8 +123,17 @@ class FastPortfolioInit {
             const navLinks = document.getElementById("nav-links");
             
             if (mobileToggle && navLinks) {
-                mobileToggle.addEventListener("click", () => {
+                // Toggle mobile menu on hamburger click
+                mobileToggle.addEventListener("click", (e) => {
+                    e.stopPropagation(); // Prevent event bubbling
                     navLinks.classList.toggle("mobile-open");
+                });
+                
+                // Close mobile menu when clicking on a navigation link
+                navLinks.addEventListener("click", (e) => {
+                    if (e.target.classList.contains("nav-link")) {
+                        navLinks.classList.remove("mobile-open");
+                    }
                 });
                 
                 // Close mobile menu when clicking outside
@@ -370,11 +379,9 @@ class FastPortfolioInit {
     scheduleOptionalFeatures() {
         // Load heavy features after user interaction or timeout
         const loadHeavyFeatures = () => {
-            if (window.lazyLoader) {
-                // Load markdown parser if needed
-                window.lazyLoader.loadScript('https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js')
-                    .catch(error => console.warn('Failed to load Marked.js:', error));
-            }
+            // Marked.js is now loaded on-demand in home.js when needed
+            // This space can be used for other optional features
+            console.log('🔧 Optional features area ready for future enhancements');
         };
 
         // Load after user interaction or 3 seconds
