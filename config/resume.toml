@@ -57,6 +57,21 @@ achievements = [
 
 # Projects Section
 [[projects]]
+name = "NexoDrive - Your Google Drive, Reimagined"
+description = "Developed a modern file-sharing platform that converts Google Drive content into a secure, searchable, and organized digital library."
+technologies = ["ReactJS", "NodeJS", "Google Drive API", "Cloudflare Workers"]
+start_date = "2025"
+end_date = "2025"
+live_url = "https://nexodrive.xyz/"
+highlights = [
+    "Engineered NexoDrive to transform Google Drive files into a searchable, beautifully organized digital library without storing or altering user data.",
+    "Built the NexoDrive Engine to scan and index metadata, enabling instant, intelligent search across large file sets.",
+    "Implemented secure, temporary expiring links to stream files directly from Google Drive while maintaining full privacy and control.",
+    "Designed a modern, responsive UI with PWA support, dark mode, file previews, and smart bookmarking features.",
+    "Delivered a professional content delivery experience optimized for educators, teams, and creators."
+]
+
+[[projects]]
 name = "FlexiFrame-A Comprehensive CSS Library (2024)"
 description = "Programmed a CSS library with 25+ components and advanced layouts using Sass, designed for scalability and maintainability."
 technologies = ["Sass", "CSS", "BEM"]

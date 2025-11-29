@@ -1,5 +1,21 @@
 ## Featured Work
 
+### 📚 NexoDrive - Your Google Drive, Reimagined
+*Cloudflare Workers • ReactJS • NodeJS • MongoDB • Google Drive APIs *
+
+Developed NexoDrive, a modern file-sharing platform that transforms Google Drive content into a secure, searchable, and beautifully organized digital library for seamless sharing and access.
+
+**Key Features:**
+- Built the NexoDrive Engine to scan and index Google Drive metadata without storing or modifying any user files.
+- Implemented lightning-fast search, file previews, bookmarking, and a clean browsing interface for intuitive user experience.
+- Engineered secure, temporary, expiring links to stream files directly from Google Drive while maintaining complete privacy and control.
+- Designed a fully responsive UI with PWA capabilities, dark mode, and a polished, modern user experience.
+- Optimized the platform for educators, creators, and teams by offering a professional, efficient, and scalable file delivery system.
+
+[View Live](https://nexodrive.xyz/) • [Organization](https://nexodrive.xyz/)
+
+---
+
 ### 📚 StudyTub - Educational Platform
 *Cloudflare Workers • ReactJS • NodeJS • MongoDB*
 
