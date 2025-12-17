@@ -56,6 +56,23 @@ achievements = [
 ]
 
 # Projects Section
+
+[[projects]]
+name = "GitHubWrap - AI-Powered GitHub Insights (2024)"
+description = "Built an AI-driven, space-themed platform that analyzes GitHub activity and transforms coding data into visually engaging insights and shareable reports."
+technologies = ["Node.js", "React", "GitHub API", "Gemini AI"]
+start_date = "2025"
+end_date = "2025"
+live_url = "https://githubwrap.space/"
+github_url = ""
+highlights = [
+    "Developed GitHubWrap to analyze commits, streaks, and contribution patterns using GitHub API and AI-powered insights.",
+    "Integrated Gemini AI model to generate developer personality insights and meaningful summaries of coding behavior.",
+    "Designed an immersive space-themed UI to visualize yearly GitHub activity in a fun and engaging way.",
+    "Implemented shareable reports allowing users to showcase achievements and milestones with peers.",
+    "Created an interactive experience suitable for both beginner and experienced developers to reflect on growth and habits."
+]
+
 [[projects]]
 name = "NexoDrive - Your Google Drive, Reimagined"
 description = "Developed a modern file-sharing platform that converts Google Drive content into a secure, searchable, and organized digital library."

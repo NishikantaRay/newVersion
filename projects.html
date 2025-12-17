@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,18 @@
     <link rel="stylesheet" href="./css/projects-config-override.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    
+
     <!-- Chart.js for analytics -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
-    
+
     <!-- TOML parser -->
     <script src="https://cdn.jsdelivr.net/npm/js-toml@0.5.0/dist/toml.min.js"></script>
-    
+
     <!-- Markdown parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
-    
+
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="nav" data-section="navigation">
@@ -27,13 +29,14 @@
             <div class="nav-mobile-spacer"></div>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
+
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
                 <li><a href="https://blog.nishikanta.in/" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-controls">
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu" data-feature="mobile-menu">
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu"
+                    data-feature="mobile-menu">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -61,7 +64,8 @@
     <main class="main">
         <header class="page-header">
             <h1 class="page-title">Projects</h1>
-            <p class="page-subtitle">A showcase of my recent work in web development, design, and open source contributions.</p>
+            <p class="page-subtitle">A showcase of my recent work in web development, design, and open source
+                contributions.</p>
         </header>
 
         <div id="content" class="content" data-section="main-content">
@@ -71,7 +75,7 @@
         <!-- Project Analytics Section -->
         <section class="analytics-section" data-section="analytics">
             <h2 class="analytics-title">Project Analytics & Activity</h2>
-            
+
             <div class="analytics-grid">
                 <!-- Weekly Activity Chart -->
                 <div class="analytics-card" data-section="charts" data-chart="weekly-activity">
@@ -127,9 +131,10 @@
     </main>
 
     <!-- Footer -->
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; <span id="footer-year"></span> Nishikanta Ray. Built with <a href="https://renderer.nishikanta.in/" target="_blank" rel="noopener noreferrer">Renderer</a> ❤️</p>
+        <p>&copy; <span id="footer-year"></span> Nishikanta Ray. Built with <a href="https://renderer.nishikanta.in/"
+                target="_blank" rel="noopener noreferrer">Renderer</a> ❤️</p>
     </footer>
 
     <script>
@@ -141,9 +146,10 @@
     <!-- Projects Configuration -->
     <script src="js/toml-loader.js"></script>
     <script src="js/projects-config-toml.js"></script>
-    
+
     <!-- Project Analytics Configuration -->
     <script src="js/project-analytics-config.js"></script>
     <script src="./js/projects.js"></script>
 </body>
+
 </html>

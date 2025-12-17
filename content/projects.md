@@ -1,5 +1,3 @@
-## Featured Work
-
 ### 🚀 GitHubWrap — Your GitHub, Wrapped in the Cosmos  
 *ReactJS • NodeJS • GitHub API • Gemini AI Model*
 
