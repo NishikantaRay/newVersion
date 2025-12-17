@@ -1,5 +1,21 @@
 ## Featured Work
 
+### 🚀 GitHubWrap — Your GitHub, Wrapped in the Cosmos  
+*ReactJS • NodeJS • GitHub API • Gemini AI Model*
+
+Developed **GitHubWrap**, an AI-powered, space-themed platform that transforms GitHub activity into a visually engaging and insightful annual review of a developer’s coding journey.
+
+**Key Features:**
+- Analyzed commits, streaks, repositories, and contribution patterns using the GitHub API.
+- Integrated the Gemini AI model to generate personalized insights and developer personality summaries.
+- Designed an immersive space-themed visualization to present coding analytics in a fun, engaging way.
+- Built shareable reports enabling users to showcase milestones and achievements effortlessly.
+- Created an intuitive experience for both beginner and experienced developers to reflect on growth and improve coding habits.
+
+[View Live](https://githubwrap.space/) • [GitHubWrap](https://githubwrap.space/)
+
+---
+
 ### 📚 NexoDrive - Your Google Drive, Reimagined
 *Cloudflare Workers • ReactJS • NodeJS • MongoDB • Google Drive APIs *
 
@@ -133,48 +149,6 @@ A powerful, configuration-driven portfolio system that transforms your story int
 - Mobile-first responsive design
 
 [View Live](https://renderer.nishikanta.in/) • [GitHub](https://github.com/NishikantaRay/renderer)
-
-## Open Source Contributions
-
-I actively contribute to open source projects and maintain several repositories that have gained community traction:
-
-### 🌟 Popular Projects
-- **Bootstrap 5 VS Code Extension** - 19,000+ installs, 4.8/5 rating ⭐ 1
-- **Live Server Lite Extension** - 2,000+ installs on Open VSX Registry ⭐ 1  
-- **Generator Backdraft** - Multi-framework Node.js scaffolding tool ⭐ 1
-- **RaceLock JS** - Concurrency control for Node.js applications ⭐ 1
-- **Regex VS Code Extension** - 100+ regex patterns library ⭐ 2
-- **Renderer Portfolio System** - Configuration-driven portfolio builder
-- **StudyTub Platform** - Educational platform serving 4500+ students
-
-### 🏆 Developer Program & Organizations
-- **GitHub Developer Program Member** - Verified developer status
-- **StudyTubOfficial** - Owner and maintainer of educational platform
-- **Opentek-Org** - Active maintainer and contributor
-- **Anonys-Tech** - Freelancing organization owner
-
-### 📊 GitHub Stats
-- **310+ contributions** in the last year
-- **131 repositories** created and maintained
-- **Multiple organizations** founded and managed
-- **Active community engagement** with consistent contributions
-
-## Side Projects & Experiments
-
-### 📝 Educational Initiatives
-- **StudyTub Platform** - Serving 4500+ students with study materials
-- **Tutorial Content** - Creating educational resources for developers
-
-### 🔧 Developer Productivity Tools
-- **VS Code Extensions** - Multiple extensions improving developer workflow
-- **CLI Tools** - Command-line utilities for common development tasks
-- **Automation Scripts** - Workflow automation and productivity enhancers
-
-### 🎯 Technology Exploration
-- **Cloudflare Workers** - Exploring edge computing capabilities
-- **Modern CSS** - Advanced layout techniques and optimization
-- **Node.js Concurrency** - Race condition prevention and performance
-- **TypeScript Patterns** - Advanced typing and architecture patterns
 
 ---
 
