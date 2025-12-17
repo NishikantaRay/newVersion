@@ -163,7 +163,7 @@ class MinimalPortfolio {
         title: "Full-Stack Developer & Designer",
         profile_image: "https://avatars.githubusercontent.com/u/62615392?v=4",
         intro: [
-          "I'm a passionate Software Engineer with expertise in full-stack development and a keen interest in creating innovative solutions. Currently working at <a href='https://letsflo.co' target='_blank' rel='noopener noreferrer'>@letsflo</a> and actively contributing to the open-source community.",
+          "I'm a passionate Software Engineer with expertise in full-stack development and a keen interest in creating innovative solutions. Currently working at <a href='https://letsflo.co' target='_blank' rel='noopener noreferrer'>@letsflo</a> and actively building cool projects that solve real-world problems.",
         
         ],
         actions: {
@@ -1064,7 +1064,7 @@ class MinimalPortfolio {
         <a href="https://youtube.com/@nishikantaray5637" target="_blank" class="social-link" title="YouTube">
           <span class="social-icon"><i class="fab fa-youtube"></i></span>
         </a>
-        <a href="https://instagram.com/nishikanta.ray" target="_blank" class="social-link" title="Instagram">
+        <a href="https://instagram.com/nishikantaray16ay" target="_blank" class="social-link" title="Instagram">
           <span class="social-icon"><i class="fab fa-instagram"></i></span>
         </a>
       `;

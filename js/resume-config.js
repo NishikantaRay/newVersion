@@ -17,7 +17,7 @@ window.RESUME_CONFIG_JS = {
     },
 
     summary: {
-        text: "A passionate Full Stack Developer, explorer, and freelancer with 2+ years of experience in designing, developing, and delivering innovative web solutions. Currently working at @letsflo and actively contributing to the open-source community."
+        text: "A passionate Full Stack Developer, explorer, and freelancer with 2+ years of experience in designing, developing, and delivering innovative web solutions. Currently working at @letsflo and actively building cool projects that solve real-world problems."
     },
 
     experience: [

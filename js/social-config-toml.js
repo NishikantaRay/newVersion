@@ -100,7 +100,7 @@ class SocialConfig {
                 {
                     id: 'instagram',
                     name: 'Instagram',
-                    url: 'https://instagram.com/nishikanta.ray',
+                    url: 'https://instagram.com/nishikantaray16ay',
                     icon: 'fab fa-instagram',
                     target: '_blank',
                     enabled: true

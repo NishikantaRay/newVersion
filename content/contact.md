@@ -15,9 +15,3 @@ Send me an email - I promise to respond faster than you can say "abracadabra"!
 
 💼 **Current Role:** Software Engineer at [Lets Flo](https://letsflo.co)
 
-
-For urgent inquiries, email is the fastest way to reach me.
-
----
-
-*Looking forward to hearing from you!*
