@@ -12,6 +12,9 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="alternate icon" href="/favicon.svg">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- DNS Prefetch and Preconnect for external resources -->
     <link rel="dns-prefetch" href="//avatars.githubusercontent.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
@@ -210,8 +213,8 @@
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track" id="carouselTrack">
+                <div class="swiper carousel-wrapper">
+                    <div class="swiper-wrapper" id="carouselTrack">
                         <!-- Populated by JavaScript -->
                     </div>
                 </div>
@@ -221,7 +224,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="carousel-dots" id="carouselDots"></div>
+            <div class="swiper-pagination carousel-dots" id="carouselDots"></div>
         </section>
 
         <!-- Latest Freelance Projects Section -->
@@ -416,6 +419,9 @@
             }, 500);
         });
     </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

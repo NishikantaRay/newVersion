@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Professional Portfolio</title>
     <meta name="description" content="Professional resume - Full Stack Developer & Software Engineer">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="./css/resume.css">   
+    <link rel="stylesheet" href="./css/resume.css">
 </head>
+
 <body>
     <div class="header-controls">
-        <a href="index.html" class="control-btn">← Home</a>
+        <a href="index.html" class="control-btn" style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="24" height="24" viewBox="0 0 100 100">
+                <defs>
+                    <linearGradient id="nGradientNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0969da;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path d="M 25 25 L 35 25 L 35 55 L 55 25 L 65 25 L 65 75 L 55 75 L 55 45 L 35 75 L 25 75 Z"
+                    fill="url(#nGradientNav)" stroke="url(#nGradientNav)" stroke-width="1" />
+                <circle cx="75" cy="30" r="4" fill="#58a6ff" />
+            </svg>
+            Home
+        </a>
         <button class="control-btn" id="theme-toggle">🌙 Theme</button>
         <button class="control-btn" onclick="window.resumeConfig?.shareResume()" id="share-btn">� Share</button>
     </div>
@@ -24,4 +39,5 @@
     <script src="./js/resume-config-toml.js"></script>
     <script src="./js/resume.js"></script>
 </body>
+
 </html>

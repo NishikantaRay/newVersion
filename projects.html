@@ -24,26 +24,39 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="nav" data-section="navigation">
+    <nav class="nav">
         <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Home">
+                <svg width="32" height="32" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="nGradientNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0969da;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 25 25 L 35 25 L 35 55 L 55 25 L 65 25 L 65 75 L 55 75 L 55 45 L 35 75 L 25 75 Z"
+                        fill="url(#nGradientNav)" stroke="url(#nGradientNav)" stroke-width="1" />
+                    <circle cx="75" cy="30" r="4" fill="#58a6ff" />
+                </svg>
+            </a>
             <div class="nav-mobile-spacer"></div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
 
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="https://blog.nishikanta.in/" class="nav-link" target="_blank">Blog</a></li>
+                <li><a href="https://blog.nishikanta.in/" class="nav-link" target="_blank"
+                        rel="noopener noreferrer">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-controls">
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu"
-                    data-feature="mobile-menu">
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
                     </svg>
                 </button>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" data-feature="theme-toggle">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>

@@ -1178,10 +1178,9 @@ class MinimalPortfolio {
   }
 
   async loadFeaturedCarousel() {
-    const track = document.getElementById('carouselTrack');
     const dotsContainer = document.getElementById('carouselDots');
     
-    if (!track || !dotsContainer) return;
+    if (!dotsContainer) return;
 
     // Featured projects from actual portfolio
     const featuredProducts = [
@@ -1207,7 +1206,7 @@ class MinimalPortfolio {
         name: 'Bootstrap 5 Extension',
         tagline: '100+ snippets for VS Code with 19,000+ installations',
         url: 'https://marketplace.visualstudio.com/items?itemName=Nishikanta12.bootstrap5snippets',
-        users: 210000
+        users: 21000
       },
       {
         name: 'Live Server Lite',
@@ -1220,12 +1219,18 @@ class MinimalPortfolio {
         tagline: 'Configuration-driven portfolio system with zero build process',
         url: 'https://renderer.nishikanta.in/',
         users: 2
+      },
+      {
+        name: 'Generator Backdraft',
+        tagline: 'A powerful Yeoman generator ',
+        url: 'https://npmjs.com/package/generator-backdraft',
+        users: 2
       }
     ];
 
-    // Render carousel cards
+    // Render carousel cards with Swiper slides
     const cardsHtml = featuredProducts.map((product, index) => `
-      <div class=\"carousel-card\" data-url=\"${product.url}\">
+      <div class=\"swiper-slide carousel-card\" data-url=\"${product.url}\">
         <div class=\"carousel-card-content\">
           <h3 class=\"carousel-card-name\">${product.name}</h3>
           <p class=\"carousel-card-tagline\">${product.tagline}</p>
@@ -1246,113 +1251,49 @@ class MinimalPortfolio {
       </div>
     `).join('');
 
+    const track = document.getElementById('carouselTrack');
     track.innerHTML = cardsHtml;
 
-    // Render dots
-    const dotsHtml = featuredProducts.map((_, index) => 
-      `<button class=\"carousel-dot ${index === 0 ? 'active' : ''}\" data-index=\"${index}\" aria-label=\"Go to slide ${index + 1}\"></button>`
-    ).join('');
-    dotsContainer.innerHTML = dotsHtml;
-
-    // Setup carousel controls
+    // Initialize Swiper
     this.setupCarousel(featuredProducts.length);
   }
 
   setupCarousel(totalSlides) {
-    let currentSlide = 0;
-    const track = document.getElementById('carouselTrack');
-    const prevBtn = document.querySelector('.carousel-prev');
-    const nextBtn = document.querySelector('.carousel-next');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    // Touch/Swipe support
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    const handleSwipe = () => {
-      const swipeThreshold = 50;
-      if (touchStartX - touchEndX > swipeThreshold) {
-        // Swipe left - next slide
-        nextSlide();
-      } else if (touchEndX - touchStartX > swipeThreshold) {
-        // Swipe right - previous slide
-        prevSlide();
-      }
-    };
-
-    track.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    track.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
-
-    const updateCarousel = () => {
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
-      
-      // Update dots
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
-      });
-
-      // No disabled states for infinite scroll
-      if (prevBtn) prevBtn.disabled = false;
-      if (nextBtn) nextBtn.disabled = false;
-    };
-
-    const nextSlide = () => {
-      // Infinite scroll
-      if (currentSlide < totalSlides - 1) {
-        currentSlide++;
-      } else {
-        currentSlide = 0;
-      }
-      updateCarousel();
-    };
-
-    const prevSlide = () => {
-      // Infinite scroll
-      if (currentSlide > 0) {
-        currentSlide--;
-      } else {
-        currentSlide = totalSlides - 1;
-      }
-      updateCarousel();
-    };
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', prevSlide);
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', nextSlide);
-    }
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentSlide = index;
-        updateCarousel();
-      });
-    });
-
-    // Click card to visit URL
-    document.querySelectorAll('.carousel-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const url = card.dataset.url;
-        if (url) {
-          window.open(url, '_blank', 'noopener,noreferrer');
+    // Initialize Swiper with infinite loop
+    const swiper = new Swiper('.carousel-wrapper', {
+      loop: true,
+      speed: 600,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: '.carousel-dots',
+        clickable: true,
+        bulletClass: 'carousel-dot',
+        bulletActiveClass: 'swiper-pagination-bullet-active',
+        renderBullet: function (index, className) {
+          return '<button class="' + className + '" aria-label="Go to slide ' + (index + 1) + '"></button>';
+        },
+      },
+      navigation: {
+        nextEl: '.carousel-next',
+        prevEl: '.carousel-prev',
+        disabledClass: 'swiper-button-disabled',
+      },
+      effect: 'slide',
+      on: {
+        click: function(swiper, event) {
+          const clickedCard = event.target.closest('.carousel-card');
+          if (clickedCard && clickedCard.dataset.url) {
+            window.open(clickedCard.dataset.url, '_blank', 'noopener,noreferrer');
+          }
         }
-      });
+      }
     });
-
-    // Auto-advance carousel with infinite scroll
-    setInterval(() => {
-      nextSlide();
-    }, 5000);
-
-    updateCarousel();
   }
 
   async loadLatestProducts() {

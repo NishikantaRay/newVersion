@@ -798,6 +798,16 @@ body {
     line-height: 1;
 }
 
+/* Hide all default Swiper navigation elements that aren't our custom buttons */
+.swiper-button-next:not(.carousel-btn),
+.swiper-button-prev:not(.carousel-btn),
+.swiper .swiper-button-next:not(.carousel-btn),
+.swiper .swiper-button-prev:not(.carousel-btn) {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -851,11 +861,22 @@ body {
 }
 
 .carousel-prev {
-    left: -60px;
+    left: -64px;
 }
 
 .carousel-next {
-    right: -60px;
+    right: -64px;
+}
+
+.carousel-btn.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Hide Swiper default pagination */
+.swiper-pagination {
+    position: relative !important;
+    bottom: auto !important;
 }
 
 .carousel-dots {
@@ -863,6 +884,7 @@ body {
     justify-content: center;
     gap: var(--space-2);
     margin-top: var(--space-6);
+    position: relative;
 }
 
 .carousel-dot {
@@ -874,6 +896,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0;
+    opacity: 1;
 }
 
 .carousel-dot:hover {
@@ -881,7 +904,8 @@ body {
     transform: scale(1.2);
 }
 
-.carousel-dot.active {
+.carousel-dot.active,
+.carousel-dot.swiper-pagination-bullet-active {
     width: 24px;
     border-radius: 4px;
     background: var(--text-accent);
@@ -895,7 +919,8 @@ body {
     background: rgba(255, 255, 255, 0.4);
 }
 
-[data-theme="dark"] .carousel-dot.active {
+[data-theme="dark"] .carousel-dot.active,
+[data-theme="dark"] .carousel-dot.swiper-pagination-bullet-active {
     background: var(--text-accent);
 }
 
