@@ -81,6 +81,27 @@ body {
     position: relative;
 }
 
+.nav-logo {
+    position: absolute;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo svg {
+    display: block;
+}
+
+.nav-mobile-spacer {
+    display: none;
+}
+
 .nav-links {
     display: flex;
     gap: var(--space-8);
@@ -483,6 +504,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -791,6 +813,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -806,7 +829,8 @@ body {
 
     .nav-mobile-spacer {
         display: block;
-        width: 44px; /* Same width as controls */
+        width: 44px;
+        /* Same width as controls */
     }
 
     .nav-links {
