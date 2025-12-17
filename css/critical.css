@@ -68,6 +68,27 @@ body {
     position: relative;
 }
 
+.nav-logo {
+    position: absolute;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo svg {
+    display: block;
+}
+
+.nav-mobile-spacer {
+    display: none;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -288,7 +309,8 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin: 2rem 0;
-    min-height: 44px; /* Prevent layout shift */
+    min-height: 44px;
+    /* Prevent layout shift */
     align-items: center;
 }
 
@@ -324,6 +346,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -356,22 +379,18 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent);
     animation: skeleton-shimmer 2s infinite;
 }
 
 [data-theme="dark"] .social-skeleton::before {
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
 }
 
 /* Hide loading skeleton when JavaScript loads social links */
@@ -385,9 +404,12 @@ body {
 }
 
 @keyframes skeleton-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.6;
     }
@@ -397,6 +419,7 @@ body {
     0% {
         left: -100%;
     }
+
     100% {
         left: 100%;
     }

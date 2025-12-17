@@ -8,6 +8,10 @@
     <meta name="description"
         content="A passionate Full Stack Developer, explorer, and freelancer with 2+ years of experience in designing, developing, and delivering innovative web solutions.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.svg">
+
     <!-- DNS Prefetch and Preconnect for external resources -->
     <link rel="dns-prefetch" href="//avatars.githubusercontent.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
@@ -79,6 +83,19 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Home">
+                <svg width="32" height="32" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="nGradientNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0969da;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 25 25 L 35 25 L 35 55 L 55 25 L 65 25 L 65 75 L 55 75 L 55 45 L 35 75 L 25 75 Z"
+                        fill="url(#nGradientNav)" stroke="url(#nGradientNav)" stroke-width="1" />
+                    <circle cx="75" cy="30" r="4" fill="#58a6ff" />
+                </svg>
+            </a>
             <div class="nav-mobile-spacer"></div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -180,6 +197,31 @@
                     Let's Talk
                 </a>
             </div>
+        </section>
+
+        <!-- Featured Products Carousel -->
+        <section id="featured-carousel" class="featured-carousel">
+            <div class="section-header">
+                <p class="section-subtitle">Popular projects by user count</p>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev" aria-label="Previous">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next" aria-label="Next">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
         </section>
 
         <!-- Latest Freelance Projects Section -->

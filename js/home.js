@@ -20,6 +20,7 @@ class MinimalPortfolio {
     this.setupNavigation();
     this.setupDashboard();
     await this.setupSocialLinks();
+    await this.loadFeaturedCarousel();
     await this.loadFreelanceProjects();
     await this.loadLatestProducts();
     this.updateHeroContent();
@@ -460,7 +461,7 @@ class MinimalPortfolio {
   }
 
   async loadAllContent() {
-    const sections = ["about", "projects", "contact"];
+    const sections = [ "projects", "contact"];
 
     for (const section of sections) {
       await this.loadContent(section);
@@ -1174,6 +1175,184 @@ class MinimalPortfolio {
     }).join('');
 
     container.innerHTML = projectsHtml;
+  }
+
+  async loadFeaturedCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    if (!track || !dotsContainer) return;
+
+    // Featured projects from actual portfolio
+    const featuredProducts = [
+      {
+        name: 'GitHubWrap',
+        tagline: 'Your GitHub, Wrapped in the Cosmos - AI-powered annual review',
+        url: 'https://githubwrap.space/',
+        users: 500
+      },
+      {
+        name: 'NexoDrive',
+        tagline: 'Your Google Drive, Reimagined - Secure file sharing platform',
+        url: 'https://nexodrive.xyz/',
+        users: 1
+      },
+      {
+        name: 'StudyTub',
+        tagline: 'Educational platform serving 4500+ active students',
+        url: 'https://studytub.netlify.app/',
+        users: 4500
+      },
+      {
+        name: 'Bootstrap 5 Extension',
+        tagline: '100+ snippets for VS Code with 19,000+ installations',
+        url: 'https://marketplace.visualstudio.com/items?itemName=Nishikanta12.bootstrap5snippets',
+        users: 210000
+      },
+      {
+        name: 'Live Server Lite',
+        tagline: 'Lightweight VS Code extension with 2000+ installations',
+        url: 'https://open-vsx.org/extension/Nishikanta12/live-server-lite',
+        users: 5000
+      },
+      {
+        name: 'Renderer Portfolio',
+        tagline: 'Configuration-driven portfolio system with zero build process',
+        url: 'https://renderer.nishikanta.in/',
+        users: 2
+      }
+    ];
+
+    // Render carousel cards
+    const cardsHtml = featuredProducts.map((product, index) => `
+      <div class=\"carousel-card\" data-url=\"${product.url}\">
+        <div class=\"carousel-card-content\">
+          <h3 class=\"carousel-card-name\">${product.name}</h3>
+          <p class=\"carousel-card-tagline\">${product.tagline}</p>
+          <a href=\"${product.url}\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"carousel-card-url\" onclick=\"event.stopPropagation()\">
+            <span>${product.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>
+            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\">
+              <path d=\"M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z\"></path>
+            </svg>
+          </a>
+        </div>
+        <div class=\"carousel-card-users\">
+          <svg class=\"carousel-card-users-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">
+            <path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"></path>
+            <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>
+          </svg>
+          <span class=\"carousel-card-users-count\">${product.users.toLocaleString()}</span>
+        </div>
+      </div>
+    `).join('');
+
+    track.innerHTML = cardsHtml;
+
+    // Render dots
+    const dotsHtml = featuredProducts.map((_, index) => 
+      `<button class=\"carousel-dot ${index === 0 ? 'active' : ''}\" data-index=\"${index}\" aria-label=\"Go to slide ${index + 1}\"></button>`
+    ).join('');
+    dotsContainer.innerHTML = dotsHtml;
+
+    // Setup carousel controls
+    this.setupCarousel(featuredProducts.length);
+  }
+
+  setupCarousel(totalSlides) {
+    let currentSlide = 0;
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    // Touch/Swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleSwipe = () => {
+      const swipeThreshold = 50;
+      if (touchStartX - touchEndX > swipeThreshold) {
+        // Swipe left - next slide
+        nextSlide();
+      } else if (touchEndX - touchStartX > swipeThreshold) {
+        // Swipe right - previous slide
+        prevSlide();
+      }
+    };
+
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    const updateCarousel = () => {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+
+      // No disabled states for infinite scroll
+      if (prevBtn) prevBtn.disabled = false;
+      if (nextBtn) nextBtn.disabled = false;
+    };
+
+    const nextSlide = () => {
+      // Infinite scroll
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      updateCarousel();
+    };
+
+    const prevSlide = () => {
+      // Infinite scroll
+      if (currentSlide > 0) {
+        currentSlide--;
+      } else {
+        currentSlide = totalSlides - 1;
+      }
+      updateCarousel();
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', prevSlide);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', nextSlide);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateCarousel();
+      });
+    });
+
+    // Click card to visit URL
+    document.querySelectorAll('.carousel-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const url = card.dataset.url;
+        if (url) {
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }
+      });
+    });
+
+    // Auto-advance carousel with infinite scroll
+    setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    updateCarousel();
   }
 
   async loadLatestProducts() {
