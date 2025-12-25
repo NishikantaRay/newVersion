@@ -1,3 +1,15 @@
+### 🚀 SeasonalFX — Lightweight Seasonal Magic for the Web  
+*TypeScript • Canvas API • npm • Zero Dependencies*
+
+- Developed **SeasonalFX**, a high-performance JavaScript library that adds beautiful seasonal effects—snow, petals, sparkles, and - leaves—to any website in just 3 lines of code.  
+- Focused on performance and accessibility, it delivers smooth 60fps canvas animations in a tiny 17KB bundle.  
+- Framework-agnostic and production-ready, SeasonalFX works seamlessly with React, Vue, Angular, Svelte, and vanilla JavaScript.  
+- Built to help developers enhance user experience with delightful visuals—without sacrificing speed or usability.
+
+[View Demo](https://seasonalfx.nishikanta.in/) • [npm](https://www.npmjs.com/package/seasonalfx)
+
+---
+
 ### 🚀 GitHubWrap — Your GitHub, Wrapped in the Cosmos  
 *ReactJS • NodeJS • GitHub API • Gemini AI Model*
 

@@ -58,6 +58,22 @@ achievements = [
 # Projects Section
 
 [[projects]]
+name = "SeasonalFX — Lightweight Seasonal Effects Library"
+description = "Built a high-performance JavaScript library that adds beautiful seasonal effects to websites using just 3 lines of code, without sacrificing performance or accessibility."
+technologies = ["TypeScript", "Canvas API", "JavaScript", "npm"]
+start_date = "2025"
+end_date = "2025"
+live_url = "https://seasonalfx.nishikanta.in/"
+github_url = "https://github.com/NishikantaRay/seasonalfx"
+highlights = [
+    "Developed SeasonalFX, a lightweight 17KB library for adding seasonal effects like snow, petals, sparkles, and falling leaves.",
+    "Implemented high-performance canvas-based animations optimized for smooth 60fps rendering across devices.",
+    "Designed the library to be framework-agnostic with seamless support for React, Vue, Angular, Svelte, and vanilla JavaScript.",
+    "Prioritized accessibility by respecting prefers-reduced-motion and providing user-friendly controls.",
+    "Built a TypeScript-first, dependency-free architecture focused on excellent developer experience and production readiness."
+]
+
+[[projects]]
 name = "GitHubWrap - AI-Powered GitHub Insights (2024)"
 description = "Built an AI-driven, space-themed platform that analyzes GitHub activity and transforms coding data into visually engaging insights and shareable reports."
 technologies = ["Node.js", "React", "GitHub API", "Gemini AI"]
