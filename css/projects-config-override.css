@@ -1,9 +1,0 @@
-/* Force hide analytics section when disabled */
-.analytics-section[data-section="analytics"] {
-    display: none !important;
-}
-
-/* Backup CSS rule for analytics hiding */
-body:has([data-analytics-disabled]) .analytics-section {
-    display: none !important;
-}

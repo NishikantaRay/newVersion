@@ -2,426 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nishikanta Ray - Software Engineer & Full Stack Developer</title>
-    <meta name="description"
-        content="A passionate Full Stack Developer, explorer, and freelancer with 2+ years of experience in designing, developing, and delivering innovative web solutions.">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="alternate icon" href="/favicon.svg">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
-    <!-- DNS Prefetch and Preconnect for external resources -->
-    <link rel="dns-prefetch" href="//avatars.githubusercontent.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="//rsms.me">
-    <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin>
-    <link rel="preconnect" href="https://rsms.me" crossorigin>
-
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://avatars.githubusercontent.com/u/62615392?v=4" as="image" type="image/jpeg">
-    <link rel="preload" href="./css/critical.css" as="style">
-    <link rel="preload" href="./js/fast-init.js" as="script">
-    <link rel="preload" href="./js/lazy-loader.js" as="script">
-    <link rel="preload" href="./js/toml-loader.js" as="script">
-    <link rel="preload" href="./config/home.toml" as="fetch" crossorigin>
-
-    <!-- Prefetch likely next resources -->
-    <link rel="prefetch" href="./js/home.js">
-    <link rel="prefetch" href="./js/social-config-toml.js">
-    <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js">
-
-    <!-- Critical CSS (inline core styles for above-the-fold content) -->
-    <link rel="stylesheet" href="./css/critical.css">
-
-    <!-- Fonts - Load asynchronously -->
-    <link rel="preload" href="https://rsms.me/inter/inter.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    </noscript>
-
-    <!-- Font Awesome - Defer loading -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-
-    <!-- Non-critical CSS - Load asynchronously -->
-    <link rel="preload" href="./css/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="./css/home.css">
-    </noscript>
-
-    <!-- Progressive Enhancement: Ensure critical functionality without JavaScript -->
-    <noscript>
-        <style>
-            .hero-intro,
-            .hero-actions {
-                opacity: 1 !important;
-            }
-
-            .nav-links {
-                display: flex !important;
-            }
-
-            .mobile-menu-toggle {
-                display: none !important;
-            }
-
-            .js-only {
-                display: none !important;
-            }
-        </style>
-    </noscript>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nishikanta Ray — full-stack engineer">
+  <title>Nishikanta Ray</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="Home">
-                <svg width="32" height="32" viewBox="0 0 100 100">
-                    <defs>
-                        <linearGradient id="nGradientNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#0969da;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <path d="M 25 25 L 35 25 L 35 55 L 55 25 L 65 25 L 65 75 L 55 75 L 55 45 L 35 75 L 25 75 Z"
-                        fill="url(#nGradientNav)" stroke="url(#nGradientNav)" stroke-width="1" />
-                    <circle cx="75" cy="30" r="4" fill="#58a6ff" />
-                </svg>
-            </a>
-            <div class="nav-mobile-spacer"></div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" aria-label="Home"><span class="dot"></span></a>
+      <nav>
+        <a href="index.html" class="active">index</a>
+        <a href="work.html">work</a>
+        <a href="experience.html">experience</a>
+        <a href="https://blog.nishikanta.in/" class="external" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="passions.html">passions</a>
+        <a href="achievements.html">achievements</a>
+        <a href="contact.html">contact</a>
+      </nav>
+    </div>
+  </header>
 
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="https://blog.nishikanta.in/" class="nav-link" target="_blank"
-                        rel="noopener noreferrer">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <main>
+    <h1 class="hero-title">Nishikanta Ray</h1>
 
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-profile-image">
-                <img src="https://avatars.githubusercontent.com/u/62615392?v=4" alt="Nishikanta Ray" class="profile-img"
-                    width="120" height="120" loading="eager" decoding="async" fetchpriority="high">
-            </div>
-            <h1 class="hero-title">Nishikanta Ray</h1>
-            <div class="hero-intro">
-                <p>A passionate Full Stack Developer, explorer, and freelancer with 2+ years of experience in designing,
-                    developing, and delivering innovative web solutions.</p>
-                <p>Currently working at @letsflo and actively building cool projects that solve real-world problems. I
-                    specialize in
-                    JavaScript, TypeScript, React, Node.js, and modern web technologies. Check out my <a
-                        href="projects.html">projects</a> and <a href="https://blog.nishikanta.in/" target="_blank"
-                        rel="noopener noreferrer">blog</a> for insights into my development journey.</p>
-            </div>
-            <div class="social-links" id="social-links">
-                <!-- Social links will be loaded by JavaScript -->
-            </div>
+    <div class="meta-row">
+      <span class="meta-label">full-stack engineer</span>
+      <div class="availability">
+        <span class="pulse"></span>
+        <span>open to senior roles</span>
+      </div>
+    </div>
 
-            <!-- NoScript fallback social links -->
-            <noscript>
-                <div class="social-links">
-                    <a href="https://github.com/NishikantaRay" target="_blank" class="social-link" title="GitHub"
-                        rel="noopener noreferrer">
-                        <span class="social-icon">📂</span>
-                    </a>
-                    <a href="https://linkedin.com/in/nishikanta-ray-7786a0196" target="_blank" class="social-link"
-                        title="LinkedIn" rel="noopener noreferrer">
-                        <span class="social-icon">💼</span>
-                    </a>
-                    <a href="https://twitter.com/NishikantaRay5" target="_blank" class="social-link" title="Twitter"
-                        rel="noopener noreferrer">
-                        <span class="social-icon">🐦</span>
-                    </a>
-                    <a href="mailto:nishikantaray1@gmail.com" class="social-link" title="Email">
-                        <span class="social-icon">✉️</span>
-                    </a>
-                    <a href="https://youtube.com/@nishikantaray5637" target="_blank" class="social-link" title="YouTube"
-                        rel="noopener noreferrer">
-                        <span class="social-icon">📺</span>
-                    </a>
-                </div>
-            </noscript>
+    <p class="hero-tagline" style="margin-top:30px">Shipping products, learning from users, and repeating the process.
+    </p>
 
-            <!-- Action Buttons -->
-            <div class="hero-actions">
-                <a href="resume.html" class="btn btn-primary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14,2 14,8 20,8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10,9 9,9 8,9"></polyline>
-                    </svg>
-                    View Resume
-                </a>
-                <a href="https://us10.list-manage.com/contact-form?u=6de222a2f25969efb260c03d4&form_id=f68d4e9f93e132f6e275d7e4ee0bd76a"
-                    class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    Let's Talk
-                </a>
-            </div>
-        </section>
+    <p class="hero-tagline" style="margin-top:8px">Building the next generation of <em style="color:#6E9C9F">developer
+        tools</em> and <em style="color:#6E9C9F">AI-powered software</em>.</p>
+    <div class="tags">
+      <span class="tag">JavaScript</span>
+      <span class="tag">React.js</span>
+      <span class="tag">Electron.js</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Node.js</span>
+    </div>
 
-        <!-- Featured Products Carousel -->
-        <section id="featured-carousel" class="featured-carousel">
-            <div class="section-header">
-                <p class="section-subtitle">Popular projects by user count</p>
-            </div>
-            <div class="carousel-container">
-                <button class="carousel-btn carousel-prev" aria-label="Previous">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <div class="swiper carousel-wrapper">
-                    <div class="swiper-wrapper" id="carouselTrack">
-                        <!-- Populated by JavaScript -->
-                    </div>
-                </div>
-                <button class="carousel-btn carousel-next" aria-label="Next">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div>
-            <div class="swiper-pagination carousel-dots" id="carouselDots"></div>
-        </section>
+    <div class="social-row">
+      <!-- Email -->
+      <a href="mailto:nishikantaray1@gmail.com" class="social-icon" aria-label="Email" title="nishikantaray1@gmail.com">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8.236l8 5 8-5V18z" />
+        </svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/NishikantaRay" target="_blank" rel="noopener noreferrer" class="social-icon"
+        aria-label="GitHub" title="@NishikantaRay">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+        </svg>
+      </a>
+      <!-- Twitter / X -->
+      <a href="https://x.com/NishikantaRay5" target="_blank" rel="noopener noreferrer" class="social-icon"
+        aria-label="Twitter / X" title="@NishikantaRay5">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.2 2.25h6.986l4.265 5.638 4.793-5.638zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/nishikantaray1/" target="_blank" rel="noopener noreferrer"
+        class="social-icon" aria-label="LinkedIn" title="in/nishikantaray1">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+      </a>
+    </div>
+    <div class="workspace">
+      <img src="images/dashboard.png" alt="InsightTrack dashboard">
+    </div>
 
-        <!-- Latest Freelance Projects Section -->
-        <section id="freelance-projects" class="freelance-projects">
-            <div class="section-header">
-                <h2 class="section-title">Trusted by Clients</h2>
-                <p class="section-subtitle">Companies I've worked with</p>
-            </div>
-            <div class="projects-container" id="freelanceProjectsContainer">
-                <!-- Populated by JavaScript -->
-            </div>
-            <div class="section-actions">
-                <a href="mailto:nishikantaray1@gmail.com" class="btn btn-outline">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    Contact Me
-                </a>
-            </div>
-        </section>
+    <p class="hero-sub">I'm currently building <strong style="font-weight:600;color:#222">InsightTrack</strong> — a
+      modern analytics platform focused on actionable insights, privacy, and complete data ownership.<br><br>This site
+      serves as an archive of the products, experiments, and ideas I'm turning into real-world software.</p>
 
-        <!-- Latest Products Section -->
-        <section id="latest-products" class="latest-products">
-            <div class="section-header">
-                <h2 class="section-title">Latest Products</h2>
-                <p class="section-subtitle">Tools and apps I've built</p>
-            </div>
-            <div class="products-container" id="productsContainer">
-                <!-- Populated by JavaScript -->
-            </div>
-            <div class="section-actions">
-                <a href="projects.html#products" class="btn btn-outline">View All Products</a>
-            </div>
-        </section>
+    <div class="insighttrack-links">
+      <a href="https://github.com/NishikantaRay/InsightTrack/tree/main/apps" target="_blank" rel="noopener noreferrer"
+        class="it-link">
+        <span class="it-label">InsightTrack v1</span>
+        <span class="it-meta">github ↗</span>
+      </a>
+      <a href="https://github.com/NishikantaRay/InsightTrack/tree/main/appsv2" target="_blank" rel="noopener noreferrer"
+        class="it-link">
+        <span class="it-label">InsightTrack v2</span>
+        <span class="it-meta">github ↗</span>
+      </a>
+      <a href="mailto:contact@nishikanta.in" class="it-link">
+        <span class="it-label">Request a demo</span>
+        <span class="it-meta">contact@nishikanta.in ↗</span>
+      </a>
+    </div>
+  </main>
 
-        <!-- Dashboard Analytics Section -->
-        <section id="dashboard" class="dashboard" style="display: none;">
-            <h2 class="dashboard-title">Dashboard & Analytics</h2>
-
-            <!-- Main Analytics Grid -->
-            <div class="dashboard-grid">
-                <!-- Recent Projects Chart -->
-                <div class="dashboard-card chart-card" data-section="charts">
-                    <div class="card-header">
-                        <h3 class="card-title">Recent Projects</h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 20V10"></path>
-                            <path d="M12 20V4"></path>
-                            <path d="M6 20v-6"></path>
-                        </svg>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="activityChart"></canvas>
-                    </div>
-                </div>
-
-                <!-- Tech Stack Distribution -->
-                <div class="dashboard-card chart-card" data-section="charts">
-                    <div class="card-header">
-                        <h3 class="card-title">Tech Stack</h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="projectChart"></canvas>
-                    </div>
-                </div>
-
-                <!-- Performance Metrics -->
-                <div class="dashboard-card chart-card" data-section="charts">
-                    <div class="card-header">
-                        <h3 class="card-title">Performance</h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12,6 12,12 16,14"></polyline>
-                        </svg>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="performanceChart"></canvas>
-                    </div>
-                </div>
-
-                <!-- Recent Activity -->
-                <div class="dashboard-card" data-section="recent_activity">
-                    <div class="card-header">
-                        <h3 class="card-title">Recent Activity</h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 12h18m-9-9v18"></path>
-                        </svg>
-                    </div>
-                    <div class="activity-container" id="recentActivity">
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills Progress Section -->
-            <div class="dashboard-section" data-section="skills_progress">
-                <h3 class="section-subtitle">Skills Progress</h3>
-                <div class="skills-grid" id="skillsProgress">
-
-                </div>
-            </div>
-
-            <!-- Statistics Grid -->
-            <div class="stats-grid" id="dashboardStats" data-section="statistics">
-
-            </div>
-
-            <!-- Code Quality Metrics -->
-            <div class="dashboard-section" data-section="code_quality">
-                <h3 class="section-subtitle">Code Quality</h3>
-                <div class="quality-grid" id="codeQuality">
-
-                </div>
-            </div>
-
-            <!-- Learning Progress -->
-            <div class="dashboard-section" data-section="learning_progress">
-                <h3 class="section-subtitle">Currently Learning</h3>
-                <div class="learning-grid" id="learningProgress">
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; <span id="footer-year"></span> Nishikanta Ray. Built with <a href="https://renderer.nishikanta.in/"
-                target="_blank" rel="noopener noreferrer">Renderer</a> ❤️</p>
-    </footer>
-
-    <script>
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Fast initialization system -->
-    <script defer src="./js/lazy-loader.js"></script>
-    <script defer src="./js/toml-loader.js"></script>
-    <script defer src="./js/performance-monitor.js"></script>
-    <script defer src="./js/fast-init.js"></script>
-
-    <!-- Load enhanced features only when needed -->
-    <script>
-        // Load full portfolio features after initial critical loading
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                // Load social config and full portfolio only if needed
-                const loadFullFeatures = () => {
-                    if (!window.fullFeaturesLoaded) {
-                        window.fullFeaturesLoaded = true;
-
-                        // Load social config
-                        if (!document.querySelector('script[src*="social-config"]')) {
-                            const script1 = document.createElement('script');
-                            script1.src = './js/social-config-toml.js';
-                            script1.defer = true;
-                            document.head.appendChild(script1);
-                        }
-
-                        // Load dashboard config only if dashboard is enabled
-                        if (!document.querySelector('script[src*="dashboard-config"]')) {
-                            const script2 = document.createElement('script');
-                            script2.src = './js/dashboard-config.js';
-                            script2.defer = true;
-                            document.head.appendChild(script2);
-                        }
-
-                        // Load full home.js for advanced features
-                        if (!document.querySelector('script[src*="home.js"]')) {
-                            const script3 = document.createElement('script');
-                            script3.src = './js/home.js';
-                            script3.defer = true;
-                            document.head.appendChild(script3);
-                        }
-                    }
-                };
-
-                // Load on user interaction or after delay
-                const events = ['click', 'scroll', 'keydown', 'touchstart'];
-                events.forEach(event => {
-                    document.addEventListener(event, loadFullFeatures, { once: true, passive: true });
-                });
-
-                // Fallback: load after 2 seconds anyway
-                setTimeout(loadFullFeatures, 2000);
-            }, 500);
-        });
-    </script>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Nishikanta Ray</span>
+      <span>Bengaluru, IN</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

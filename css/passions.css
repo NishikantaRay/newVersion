@@ -1,0 +1,85 @@
+.passions-intro {
+  font-family: 'Newsreader', serif;
+  font-weight: 400;
+  font-size: clamp(22px,3.4vw,30px);
+  line-height: 1.36;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px;
+  color: #222;
+}
+
+.passions-sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(34,34,34,0.7);
+  margin: 0 0 40px;
+}
+
+.passion-card {
+  border: 1px solid rgba(34,34,34,0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 24px;
+}
+
+.passion-img {
+  width: 100%;
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(34,34,34,0.08);
+}
+
+.passion-img-placeholder {
+  width: 100%;
+  aspect-ratio: 16/7;
+  background: repeating-linear-gradient(135deg,#EEF3EC,#EEF3EC 13px,#F8F6F2 13px,#F8F6F2 26px);
+  border-bottom: 1px solid rgba(34,34,34,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: rgba(34,34,34,0.35);
+  gap: 8px;
+  flex-direction: column;
+}
+
+.passion-body { padding: 22px 24px 26px; }
+
+.passion-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.passion-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0;
+  color: #222;
+}
+
+.passion-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #D6B36A;
+  white-space: nowrap;
+}
+
+.passion-desc {
+  font-size: 15.5px;
+  line-height: 1.68;
+  color: rgba(34,34,34,0.7);
+}
+
+.passion-detail {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(34,34,34,0.55);
+  margin-top: 10px;
+}

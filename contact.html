@@ -1,128 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Nishikanta Ray | Get In Touch</title>
-    <meta name="description"
-        content="Get in touch with Nishikanta Ray. Available for freelance projects, collaboration opportunities, and professional inquiries. Let's build something amazing together.">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="alternate icon" href="/favicon.svg">
-
-    <!-- SEO Meta Tags -->
-    <meta name="author" content="Nishikanta Ray">
-    <meta name="keywords"
-        content="contact, hire developer, freelance, full stack developer, web development services, collaboration">
-    <link rel="canonical" href="https://nishikanta.in/contact.html">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nishikanta.in/contact.html">
-    <meta property="og:title" content="Contact - Nishikanta Ray | Get In Touch">
-    <meta property="og:description"
-        content="Get in touch with Nishikanta Ray for freelance projects and collaboration opportunities.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/62615392?v=4">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://nishikanta.in/contact.html">
-    <meta name="twitter:title" content="Contact - Nishikanta Ray | Get In Touch">
-    <meta name="twitter:description"
-        content="Get in touch with Nishikanta Ray for freelance projects and collaboration opportunities.">
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/62615392?v=4">
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Social Configuration -->
-    <script src="js/social-config-toml.js"></script>
-
-    <!-- Markdown parser -->
-    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
-    <link rel="stylesheet" href="./css/contact.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nishikanta Ray — full-stack engineer">
+  <title>Contact — Nishikanta Ray</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="Home">
-                <svg width="32" height="32" viewBox="0 0 100 100">
-                    <defs>
-                        <linearGradient id="nGradientNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#0969da;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <path d="M 25 25 L 35 25 L 35 55 L 55 25 L 65 25 L 65 75 L 55 75 L 55 45 L 35 75 L 25 75 Z"
-                        fill="url(#nGradientNav)" stroke="url(#nGradientNav)" stroke-width="1" />
-                    <circle cx="75" cy="30" r="4" fill="#58a6ff" />
-                </svg>
-            </a>
-            <div class="nav-mobile-spacer"></div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" aria-label="Home"><span class="dot"></span></a>
+      <nav>
+        <a href="index.html">index</a>
+        <a href="work.html">work</a>
+        <a href="experience.html">experience</a>
+        <a href="https://blog.nishikanta.in/" class="external" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="passions.html">passions</a>
+        <a href="achievements.html">achievements</a>
+        <a href="contact.html" class="active">contact</a>
+      </nav>
+    </div>
+  </header>
 
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="https://blog.nishikanta.in/" class="nav-link" target="_blank"
-                        rel="noopener noreferrer">Blog</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <main>
+    <p class="section-label">Contact</p>
 
-    <!-- Main Content -->
-    <main class="main">
-        <header class="page-header">
-            <h1 class="page-title">Contact</h1>
-            <p class="page-subtitle">Let's connect! I'm always interested in discussing new opportunities and projects.
-            </p>
-        </header>
+    <h2 class="contact-heading">Let's build something thoughtful.</h2>
+    <p class="contact-sub">Open to senior roles, advisory work, and the occasional ambitious side project. Email is fastest.</p>
 
-        <div id="content" class="content">
-            <div class="loading">Loading...</div>
-        </div>
-    </main>
+    <a href="mailto:nishikantaray1@gmail.com" class="social-link">
+      <span class="social-label">Email</span>
+      <span class="social-handle">nishikantaray1@gmail.com ↗</span>
+    </a>
+    <a href="https://blog.nishikanta.in/" target="_blank" rel="noopener noreferrer" class="social-link">
+      <span class="social-label">Blog</span>
+      <span class="social-handle">blog.nishikanta.in ↗</span>
+    </a>
+    <a href="https://github.com/NishikantaRay" target="_blank" rel="noopener noreferrer" class="social-link">
+      <span class="social-label">GitHub</span>
+      <span class="social-handle">@NishikantaRay ↗</span>
+    </a>
+    <a href="https://www.linkedin.com/in/nishikantaray1/" target="_blank" rel="noopener noreferrer" class="social-link">
+      <span class="social-label">LinkedIn</span>
+      <span class="social-handle">in/nishikantaray1 ↗</span>
+    </a>
+    <a href="https://x.com/NishikantaRay5" target="_blank" rel="noopener noreferrer" class="social-link">
+      <span class="social-label">Twitter / X</span>
+      <span class="social-handle">@NishikantaRay5 ↗</span>
+    </a>
+  </main>
 
-    <!-- Footer -->
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; <span id="footer-year"></span> Nishikanta Ray. Built with <a href="https://renderer.nishikanta.in/"
-                target="_blank" rel="noopener noreferrer">Renderer</a> ❤️</p>
-    </footer>
-
-    <script>
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-    </script>
-    <script src="./js/contact.js"></script>
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Nishikanta Ray</span>
+      <span>Bengaluru, IN</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
