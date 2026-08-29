@@ -4,16 +4,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Achievements — Nishikanta Ray">
-  <title>Achievements — Nishikanta Ray</title>
+  <meta name="description" content="Hackathon wins and finals: Breaking Apps Hackathon, Smart India Hackathon 2022 finalist, Hack the Mountain, Sawo Labs.">
+  <title>Achievements — Hackathon Wins, Prizes &amp; Finals</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://nishikanta.in/achievements.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Nishikanta Ray">
+  <meta property="og:title" content="Achievements — Hackathon Wins, Prizes &amp; Finals">
+  <meta property="og:description" content="Hackathon wins and finals: Breaking Apps Hackathon, Smart India Hackathon 2022 finalist, Hack the Mountain, Sawo Labs.">
+  <meta property="og:url" content="https://nishikanta.in/achievements.html">
+  <meta property="og:image" content="https://nishikanta.in/images/dashboard.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@NishikantaRay5">
+  <meta name="twitter:title" content="Achievements — Hackathon Wins, Prizes &amp; Finals">
+  <meta name="twitter:description" content="Hackathon wins and finals: Breaking Apps Hackathon, Smart India Hackathon 2022 finalist, Hack the Mountain, Sawo Labs.">
+  <meta name="twitter:image" content="https://nishikanta.in/images/dashboard.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/achievements.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nishikanta.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Achievements",
+      "item": "https://nishikanta.in/achievements.html"
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <header>
     <div class="header-inner">
@@ -22,7 +57,8 @@
         <a href="index.html">index</a>
         <a href="work.html">work</a>
         <a href="experience.html">experience</a>
-        <a href="https://blog.nishikanta.in/" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="https://blog.nishikanta.in/" class="external" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="hackathons.html">hackathons</a>
         <a href="passions.html">passions</a>
         <a href="achievements.html" class="active">achievements</a>
         <a href="contact.html">contact</a>
@@ -30,12 +66,16 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <p class="section-label">Achievements</p>
+
+    <h1 class="page-heading">Wins, prizes, and finals.</h1>
+    <p class="page-intro">The hackathons and competitions that ended in a placement — from a national finalist spot at Smart India Hackathon to a global prize at Breaking Apps.</p>
 
     <!-- ── Hackathons ── -->
     <div class="achievement-section">
       <p class="achievement-section-label">Hackathons &amp; Competitions</p>
+      <p class="achievement-note">Prize placements below — the <a href="hackathons.html">hackathons</a> page has the full list of 26 events entered since 2020.</p>
 
       <a href="https://townhall.hashnode.com/breaking-apps-hackathon-winners" target="_blank" rel="noopener noreferrer"
         class="hack-card">
@@ -98,12 +138,12 @@
 
   <footer>
     <div class="footer-inner">
-      <span>© 2026 Nishikanta Ray</span>
+      <span>© <span id="yr">2026</span> Nishikanta Ray</span>
       <span>Bengaluru, IN</span>
     </div>
   </footer>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
 
-  <script src="js/main.js"></script>
 </body>
 
 </html>

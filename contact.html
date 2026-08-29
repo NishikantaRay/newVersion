@@ -3,15 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nishikanta Ray — full-stack engineer">
+  <meta name="description" content="Open to senior roles, advisory work, and ambitious side projects. Email is fastest.">
   <title>Contact — Nishikanta Ray</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://nishikanta.in/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Nishikanta Ray">
+  <meta property="og:title" content="Contact — Nishikanta Ray">
+  <meta property="og:description" content="Open to senior roles, advisory work, and ambitious side projects. Email is fastest.">
+  <meta property="og:url" content="https://nishikanta.in/contact.html">
+  <meta property="og:image" content="https://nishikanta.in/images/dashboard.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@NishikantaRay5">
+  <meta name="twitter:title" content="Contact — Nishikanta Ray">
+  <meta name="twitter:description" content="Open to senior roles, advisory work, and ambitious side projects. Email is fastest.">
+  <meta name="twitter:image" content="https://nishikanta.in/images/dashboard.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/contact.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nishikanta.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://nishikanta.in/contact.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <header>
     <div class="header-inner">
       <a href="index.html" aria-label="Home"><span class="dot"></span></a>
@@ -20,6 +55,7 @@
         <a href="work.html">work</a>
         <a href="experience.html">experience</a>
         <a href="https://blog.nishikanta.in/" class="external" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="hackathons.html">hackathons</a>
         <a href="passions.html">passions</a>
         <a href="achievements.html">achievements</a>
         <a href="contact.html" class="active">contact</a>
@@ -27,10 +63,10 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <p class="section-label">Contact</p>
 
-    <h2 class="contact-heading">Let's build something thoughtful.</h2>
+    <h1 class="contact-heading">Let's build something thoughtful.</h1>
     <p class="contact-sub">Open to senior roles, advisory work, and the occasional ambitious side project. Email is fastest.</p>
 
     <a href="mailto:nishikantaray1@gmail.com" class="social-link">
@@ -49,6 +85,14 @@
       <span class="social-label">LinkedIn</span>
       <span class="social-handle">in/nishikantaray1 ↗</span>
     </a>
+    <a href="https://dev.to/nishikantaray" target="_blank" rel="noopener noreferrer" class="social-link">
+      <span class="social-label">DEV</span>
+      <span class="social-handle">@nishikantaray ↗</span>
+    </a>
+    <a href="https://www.youtube.com/@NishikantaRay" target="_blank" rel="noopener noreferrer" class="social-link">
+      <span class="social-label">YouTube</span>
+      <span class="social-handle">@NishikantaRay ↗</span>
+    </a>
     <a href="https://x.com/NishikantaRay5" target="_blank" rel="noopener noreferrer" class="social-link">
       <span class="social-label">Twitter / X</span>
       <span class="social-handle">@NishikantaRay5 ↗</span>
@@ -57,10 +101,10 @@
 
   <footer>
     <div class="footer-inner">
-      <span>© 2026 Nishikanta Ray</span>
+      <span>© <span id="yr">2026</span> Nishikanta Ray</span>
       <span>Bengaluru, IN</span>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
 </body>
 </html>

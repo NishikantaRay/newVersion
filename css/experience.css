@@ -1,7 +1,7 @@
 .timeline {
   position: relative;
   padding-left: 26px;
-  border-left: 1px solid rgba(34,34,34,0.14);
+  border-left: 1px solid var(--rule-14);
 }
 
 .timeline-item { position: relative; padding-bottom: 34px; }
@@ -14,11 +14,11 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: rgba(34,34,34,0.25);
-  box-shadow: 0 0 0 4px #F8F6F2;
+  background: var(--rule-14);
+  box-shadow: 0 0 0 4px var(--bg);
 }
 
-.timeline-dot.active { background: #6E9C9F; }
+.timeline-dot.active { background: var(--accent); }
 
 .timeline-header {
   display: flex;
@@ -33,19 +33,19 @@
   font-weight: 500;
   font-size: 20px;
   margin: 0;
-  color: #222;
+  color: var(--ink);
 }
 
 .timeline-date {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
-  color: rgba(34,34,34,0.45);
+  color: var(--ink-45);
 }
 
 .timeline-meta {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11.5px;
-  color: rgba(34,34,34,0.4);
+  color: var(--ink-45);
   margin-top: 4px;
 }
 
@@ -53,7 +53,7 @@
   margin: 9px 0 0;
   font-size: 15.5px;
   line-height: 1.65;
-  color: rgba(34,34,34,0.72);
+  color: var(--ink-70);
 }
 
 .timeline-bullets {
@@ -61,11 +61,117 @@
   padding-left: 18px;
   font-size: 15px;
   line-height: 1.7;
-  color: rgba(34,34,34,0.68);
+  color: var(--ink-70);
   display: flex;
   flex-direction: column;
   gap: 4px;
   list-style: disc;
 }
 
-.timeline-bullets li::marker { color: #6E9C9F; }
+.timeline-bullets li::marker { color: var(--accent); }
+
+.timeline-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+.timeline-title a:hover { color: var(--accent); }
+
+/* ── Page intro ── */
+.exp-heading {
+  font-family: 'Newsreader', serif;
+  font-weight: 600;
+  font-size: clamp(28px,5vw,40px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.exp-intro {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-70);
+  margin-top: 14px;
+  max-width: 58ch;
+}
+
+.exp-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 30px 0 44px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.exp-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px 14px;
+  background: var(--surface);
+}
+
+.exp-summary-num {
+  font-family: 'Newsreader', serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.exp-summary-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--ink-45);
+  text-wrap: balance;
+}
+
+/* ── Sub-sections within a role ── */
+.timeline-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+
+.timeline-sub-tag {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 2px 8px;
+  text-transform: lowercase;
+}
+
+/* ── Per-role tech tags ── */
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.timeline-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-60);
+  border: 1px solid var(--rule-14);
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+@media (max-width: 560px) {
+  .exp-summary { grid-template-columns: repeat(2, 1fr); }
+}

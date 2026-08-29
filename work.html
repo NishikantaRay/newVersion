@@ -4,16 +4,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Work — Nishikanta Ray">
-  <title>Work — Nishikanta Ray</title>
+  <meta name="description" content="Selected work: InsightTrack analytics platform, StudyTub (6,000+ students), and VS Code extensions installed 58,000+ times.">
+  <title>Work — InsightTrack, StudyTub &amp; VS Code Extensions</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://nishikanta.in/work.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Nishikanta Ray">
+  <meta property="og:title" content="Work — InsightTrack, StudyTub &amp; VS Code Extensions">
+  <meta property="og:description" content="Selected work: InsightTrack analytics platform, StudyTub (6,000+ students), and VS Code extensions installed 58,000+ times.">
+  <meta property="og:url" content="https://nishikanta.in/work.html">
+  <meta property="og:image" content="https://nishikanta.in/images/dashboard.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@NishikantaRay5">
+  <meta name="twitter:title" content="Work — InsightTrack, StudyTub &amp; VS Code Extensions">
+  <meta name="twitter:description" content="Selected work: InsightTrack analytics platform, StudyTub (6,000+ students), and VS Code extensions installed 58,000+ times.">
+  <meta name="twitter:image" content="https://nishikanta.in/images/dashboard.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/work.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nishikanta.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://nishikanta.in/work.html"
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <header>
     <div class="header-inner">
       <a href="index.html" aria-label="Home"><span class="dot"></span></a>
@@ -22,6 +57,7 @@
         <a href="work.html" class="active">work</a>
         <a href="experience.html">experience</a>
         <a href="https://blog.nishikanta.in/" class="external" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="hackathons.html">hackathons</a>
         <a href="passions.html">passions</a>
         <a href="achievements.html">achievements</a>
         <a href="contact.html">contact</a>
@@ -29,35 +65,40 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <p class="section-label">Selected work</p>
+
+    <h1 class="page-heading">Products I have built and shipped.</h1>
+    <p class="page-intro">Analytics infrastructure, developer tools, and VS Code extensions — the things that made it out of the editor and in front of real users.</p>
 
     <!-- ── InsightTrack — featured ── -->
     <a href="https://github.com/NishikantaRay/InsightTrack" target="_blank" rel="noopener noreferrer"
       class="featured-project">
-      <img src="images/dashboard.png" alt="InsightTrack dashboard" class="featured-img">
+      <img src="images/dashboard.jpg" alt="InsightTrack dashboard" width="1400" height="726" loading="lazy" decoding="async" class="featured-img">
       <div class="featured-body">
         <div class="featured-header">
           <span class="featured-name">InsightTrack</span>
-          <span class="featured-meta">1 user · privacy-first · MERN</span>
+          <span class="featured-meta">dual-database · privacy-first · self-hosted</span>
         </div>
         <p class="featured-desc">A modern web analytics platform built around actionable insights, complete data
           ownership, and zero compromise on privacy.</p>
         <p class="featured-detail">InsightTrack gives teams a real-time view of how users move through their product —
-          from first pageview to conversion — without sending data to third parties. Built with a Node.js + Express
-          backend, MongoDB for event storage, and a React frontend that updates live via WebSocket. Supports custom
-          domains, funnel analysis, user-flow visualisation, and heatmaps out of the box.</p>
+          from first pageview to conversion — without sending data to third parties. It runs a split-storage design:
+          PostgreSQL absorbs every write on the tracking path, while a DuckDB column store answers the dashboard's
+          analytical queries 10–100× faster than the same aggregations against Postgres. A sync pipeline keeps the two
+          in step. Node.js + Express on the backend, React 18 + Vite on the front, with an MCP server that lets an AI
+          analyst query your data in plain English.</p>
 
         <div class="featured-tags">
-          <span class="featured-tag">Real-time dashboard</span>
-          <span class="featured-tag">Traffic &amp; pageviews</span>
+          <span class="featured-tag">PostgreSQL</span>
+          <span class="featured-tag">DuckDB</span>
+          <span class="featured-tag">React 18</span>
+          <span class="featured-tag">Node.js</span>
+          <span class="featured-tag">MCP / AI analyst</span>
+          <span class="featured-tag">SQL editor</span>
           <span class="featured-tag">Funnels</span>
           <span class="featured-tag">User flow</span>
-          <span class="featured-tag">Heatmaps</span>
-          <span class="featured-tag">Node.js</span>
-          <span class="featured-tag">React</span>
-          <span class="featured-tag">MongoDB</span>
-          <span class="featured-tag">WebSocket</span>
+          <span class="featured-tag">Self-hosted</span>
         </div>
 
         <div class="featured-links">
@@ -70,18 +111,18 @@
 
     <!-- ── StudyTub — featured ── -->
     <a href="https://studytub.netlify.app/" target="_blank" rel="noopener noreferrer" class="featured-project">
-      <img src="images/studytub.png" alt="StudyTub — BTECH study platform" class="featured-img">
+      <img src="images/studytub.jpg" alt="StudyTub — BTECH study platform" width="1400" height="726" loading="lazy" decoding="async" class="featured-img">
       <div class="featured-body">
         <div class="featured-header">
           <span class="featured-name">StudyTub</span>
-          <span class="featured-meta">5,500+ students · live</span>
+          <span class="featured-meta">6,000+ students · live · still growing</span>
         </div>
         <p class="featured-desc">A BTECH study companion that makes high-quality notes accessible to every student —
           anytime, on any device.</p>
         <p class="featured-detail">StudyTub centralises BTECH study materials in one clean, fast interface. Students can
           browse notes by subject, bookmark resources, and watch curated video walkthroughs — without hunting across
           drives and WhatsApp groups. Built with a React frontend deployed on Netlify, with a lightweight backend for
-          auth and content management. Used by 5,500+ enrolled students.</p>
+          auth and content management. Used by 6,000+ students to date, and still growing.</p>
 
         <div class="featured-tags">
           <span class="featured-tag">Study notes</span>
@@ -89,7 +130,7 @@
           <span class="featured-tag">React</span>
           <span class="featured-tag">Netlify</span>
           <span class="featured-tag">Auth</span>
-          <span class="featured-tag">5,500+ users</span>
+          <span class="featured-tag">6,000+ students</span>
         </div>
 
         <div class="featured-links">
@@ -107,11 +148,12 @@
         <div class="project-info">
           <div class="project-header">
             <span class="project-name">Live Server Lite</span>
-            <span class="project-meta">30K+ installs · VS Code</span>
+            <span class="project-meta">32K+ installs · VS Code</span>
           </div>
           <p class="project-desc">A lightweight VS Code extension that spins up a local development server with live
             reload —
-            no config, no dependencies, just open and code. Used by 30,000+ developers across the Open VSX registry.</p>
+            no config, no dependencies, just open and code. Installed 32,000+ times across the Open VSX registry and the
+            VS Code Marketplace.</p>
         </div>
       </a>
       <a href="https://marketplace.visualstudio.com/items?itemName=Nishikanta12.bootstrap5snippets" target="_blank"
@@ -120,12 +162,12 @@
         <div class="project-info">
           <div class="project-header">
             <span class="project-name">Bootstrap 5 Snippets</span>
-            <span class="project-meta">23K+ installs · VS Code</span>
+            <span class="project-meta">25K+ installs · VS Code</span>
           </div>
           <p class="project-desc">A VS Code extension delivering ready-to-use Bootstrap 5 component snippets — grids,
             cards,
-            modals, navbars and more — directly in the editor. Downloaded by 23,000+ developers on the VS Code
-            Marketplace.
+            modals, navbars and more — directly in the editor. Installed 25,000+ times across the VS Code Marketplace and
+            Open VSX.
           </p>
         </div>
       </a>
@@ -189,22 +231,31 @@
     </div>
 
     <p class="also-building">Also published on npm — <a href="https://www.npmjs.com/package/generator-backdraft"
-        target="_blank" rel="noopener noreferrer">generator-backdraft</a> <span
-        style="color:rgba(34,34,34,0.4);font-family:'IBM Plex Mono',monospace;font-size:12px">2.5K installs</span> · <a
-        href="https://www.npmjs.com/package/seasonalfx" target="_blank" rel="noopener noreferrer">seasonalfx</a> <span
-        style="color:rgba(34,34,34,0.4);font-family:'IBM Plex Mono',monospace;font-size:12px">735 installs</span> · <a
-        href="https://www.npmjs.com/package/race-lock-js" target="_blank" rel="noopener noreferrer">race-lock-js</a>
-      <span style="color:rgba(34,34,34,0.4);font-family:'IBM Plex Mono',monospace;font-size:12px">200 installs</span>
+        target="_blank" rel="noopener noreferrer">generator-backdraft</a> <span class="npm-stat">2.5K total
+        installs</span> · <a href="https://www.npmjs.com/package/seasonalfx" target="_blank"
+        rel="noopener noreferrer">seasonalfx</a> <span class="npm-stat">250+/mo</span> · <a
+        href="https://www.npmjs.com/package/race-lock-js" target="_blank"
+        rel="noopener noreferrer">race-lock-js</a> <span class="npm-stat">200 total installs</span>
     </p>
+
+    <a href="https://github.com/NishikantaRay" target="_blank" rel="noopener noreferrer" class="gh-card">
+      <div class="gh-card-body">
+        <p class="gh-card-title">More interesting projects on GitHub</p>
+        <p class="gh-card-desc">The experiments, half-finished ideas, and hackathon builds that never got a landing
+          page — 139 public repositories and counting.</p>
+      </div>
+      <span class="gh-card-link">github.com/NishikantaRay ↗</span>
+    </a>
+
   </main>
 
   <footer>
     <div class="footer-inner">
-      <span>© 2026 Nishikanta Ray</span>
+      <span>© <span id="yr">2026</span> Nishikanta Ray</span>
       <span>Bengaluru, IN</span>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
 </body>
 
 </html>

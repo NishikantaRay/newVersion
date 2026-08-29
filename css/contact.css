@@ -5,13 +5,13 @@
   line-height: 1.06;
   letter-spacing: -0.025em;
   margin: 0 0 14px;
-  color: #222;
+  color: var(--ink);
 }
 
 .contact-sub {
   font-size: 17px;
   line-height: 1.65;
-  color: rgba(34,34,34,0.72);
+  color: var(--ink-70);
   margin: 0 0 34px;
   max-width: 46ch;
 }
@@ -24,21 +24,21 @@
   gap: 10px;
   align-items: baseline;
   padding: 18px 0;
-  border-top: 1px solid rgba(34,34,34,0.14);
+  border-top: 1px solid var(--rule-14);
   transition: padding-left .22s ease;
 }
 
 .social-link:hover { padding-left: 10px; }
-.social-link:last-child { border-bottom: 1px solid rgba(34,34,34,0.14); }
+.social-link:last-child { border-bottom: 1px solid var(--rule-14); }
 
 .social-label {
   font-family: 'Newsreader', serif;
   font-size: 23px;
-  color: #222;
+  color: var(--ink);
 }
 
 .social-handle {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13px;
-  color: rgba(34,34,34,0.6);
+  color: var(--ink-60);
 }

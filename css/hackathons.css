@@ -1,0 +1,208 @@
+.ch-heading {
+  font-family: 'Newsreader', serif;
+  font-weight: 600;
+  font-size: clamp(28px,5vw,40px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.ch-intro {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-70);
+  margin-top: 14px;
+  max-width: 60ch;
+}
+
+/* ── Summary strip ── */
+.ch-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 30px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ch-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px 14px;
+  background: var(--surface);
+}
+
+.ch-summary-num {
+  font-family: 'Newsreader', serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.ch-summary-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--ink-45);
+  text-wrap: balance;
+}
+
+/* ── Year heading ── */
+.ch-year {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--ink-45);
+  margin: 44px 0 14px;
+}
+
+/* ── Challenge rows ── */
+.ch-list {
+  border: 1px solid var(--rule-14);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ch-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+  transition: background .15s;
+}
+
+.ch-item:last-child { border-bottom: none; }
+.ch-item:hover      { background: var(--surface-2); }
+
+.ch-item.is-winner {
+  border-left: 3px solid var(--gold);
+  padding-left: 19px;
+}
+
+.ch-main { min-width: 0; }
+
+.ch-title {
+  font-family: 'Newsreader', serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.ch-host {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--ink-45);
+}
+
+.ch-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-60);
+  margin-top: 7px;
+  max-width: 62ch;
+}
+
+.ch-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 11px;
+}
+
+.ch-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-60);
+  border: 1px solid var(--rule-14);
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+.ch-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.ch-result {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-45);
+  border: 1px solid var(--rule-14);
+  border-radius: 999px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+.ch-result.is-prize {
+  color: var(--ink);
+  border-color: var(--gold);
+  background: rgba(214,179,106,0.13);
+}
+
+.ch-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  color: var(--ink-45);
+  white-space: nowrap;
+}
+
+.ch-footnote {
+  margin-top: 40px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-60);
+}
+
+.ch-footnote a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.ch-footnote a:hover { border-bottom-color: var(--accent); }
+
+@media (max-width: 640px) {
+  .ch-summary { grid-template-columns: repeat(2, 1fr); }
+  .ch-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ch-side {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+.ch-team {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  color: var(--ink-45);
+  white-space: nowrap;
+}
+
+.ch-item.is-nolink { cursor: default; }
+.ch-item.is-nolink:hover { background: var(--surface); }
+
+.ch-plus {
+  color: var(--accent);
+  font-size: 0.62em;
+  vertical-align: super;
+}

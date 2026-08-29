@@ -3,15 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Passions — Nishikanta Ray">
-  <title>Passions — Nishikanta Ray</title>
+  <meta name="description" content="Off the clock: balcony gardening, painting, clay and pottery, and building small tools on nights and weekends.">
+  <title>Passions — Gardening, Painting &amp; Pottery</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://nishikanta.in/passions.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Nishikanta Ray">
+  <meta property="og:title" content="Passions — Gardening, Painting &amp; Pottery">
+  <meta property="og:description" content="Off the clock: balcony gardening, painting, clay and pottery, and building small tools on nights and weekends.">
+  <meta property="og:url" content="https://nishikanta.in/passions.html">
+  <meta property="og:image" content="https://nishikanta.in/images/dashboard.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@NishikantaRay5">
+  <meta name="twitter:title" content="Passions — Gardening, Painting &amp; Pottery">
+  <meta name="twitter:description" content="Off the clock: balcony gardening, painting, clay and pottery, and building small tools on nights and weekends.">
+  <meta name="twitter:image" content="https://nishikanta.in/images/dashboard.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/passions.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nishikanta.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Passions",
+      "item": "https://nishikanta.in/passions.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <header>
     <div class="header-inner">
       <a href="index.html" aria-label="Home"><span class="dot"></span></a>
@@ -20,6 +55,7 @@
         <a href="work.html">work</a>
         <a href="experience.html">experience</a>
         <a href="https://blog.nishikanta.in/" class="external" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="hackathons.html">hackathons</a>
         <a href="passions.html" class="active">passions</a>
         <a href="achievements.html">achievements</a>
         <a href="contact.html">contact</a>
@@ -27,15 +63,17 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <p class="section-label">Off the clock</p>
 
-    <p class="passions-intro">The same patience I bring to systems, I bring to <em style="color:#6E9C9F">slower, hands-on things</em>.</p>
+    <h1 class="page-heading">What I do away from the keyboard.</h1>
+
+    <p class="passions-intro">The same patience I bring to systems, I bring to <em class="accent">slower, hands-on things</em>.</p>
     <p class="passions-sub">Building is a through-line, but it's not the whole story. A few things I tend to outside of work — they keep my eye sharp and my hands busy.</p>
 
     <!-- Gardening -->
     <div class="passion-card">
-      <img src="images/garden.jpeg" alt="Balcony garden" class="passion-img">
+      <img src="images/garden.jpeg" alt="Balcony garden" width="1400" height="933" loading="lazy" decoding="async" class="passion-img">
       <div class="passion-body">
         <div class="passion-header">
           <h3 class="passion-title">Balcony Gardening</h3>
@@ -48,7 +86,7 @@
 
     <!-- Painting -->
     <div class="passion-card">
-      <img src="images/pain.jpeg" alt="Painting" class="passion-img">
+      <img src="images/pain.jpeg" alt="Painting" width="1400" height="933" loading="lazy" decoding="async" class="passion-img">
       <div class="passion-body">
         <div class="passion-header">
           <h3 class="passion-title">Painting</h3>
@@ -61,7 +99,7 @@
 
     <!-- Clay -->
     <div class="passion-card">
-      <img src="images/clay.jpeg" alt="Clay and pottery" class="passion-img">
+      <img src="images/clay.jpeg" alt="Clay and pottery" width="1400" height="933" loading="lazy" decoding="async" class="passion-img">
       <div class="passion-body">
         <div class="passion-header">
           <h3 class="passion-title">Clay &amp; Pottery</h3>
@@ -74,7 +112,7 @@
 
     <!-- Building apps -->
     <div class="passion-card">
-      <img src="images/laptop.jpeg" alt="Building apps" class="passion-img">
+      <img src="images/laptop.jpeg" alt="Building apps" width="1400" height="1050" loading="lazy" decoding="async" class="passion-img">
       <div class="passion-body">
         <div class="passion-header">
           <h3 class="passion-title">Building apps</h3>
@@ -89,10 +127,10 @@
 
   <footer>
     <div class="footer-inner">
-      <span>© 2026 Nishikanta Ray</span>
+      <span>© <span id="yr">2026</span> Nishikanta Ray</span>
       <span>Bengaluru, IN</span>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
 </body>
 </html>
